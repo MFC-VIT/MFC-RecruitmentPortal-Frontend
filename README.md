@@ -1,1 +1,1 @@
-# MFC-RecruitmentPortal-Frontend
+# MFC RecruitmentPortal Frontend
