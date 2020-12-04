@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+	<div class="home-main">
+		<button @click="apitest">Click me</button>
+	</div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+	name: 'Home',
+	methods: {
+		apitest() {
+			const email = 'avish.j@protonmail.com';
+			const username = 'avishj';
+			const phone_number = '7488259466';
+			const password = 'thisisatest';
+			this.$store
+				.dispatch('register', email, username, phone_number, password)
+				.then(success => {
+					alert('Kaam karta hai tera API');
+				})
+				.catch(error => {
+					alert(error);
+				});
+		}
+	}
 };
 </script>
+
+<style scoped></style>
