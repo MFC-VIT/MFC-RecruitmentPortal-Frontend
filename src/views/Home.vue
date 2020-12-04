@@ -16,7 +16,8 @@ export default {
 			const phone_number = '7488259466';
 			const password = 'thisisatest';
 			this.$store
-				.dispatch('register', email, username, phone_number, password)
+        .dispatch('register', email, username, phone_number, password)
+        // eslint-disable-next-line no-unused-vars
 				.then(success => {
 					alert('Kaam karta hai tera API');
 				})

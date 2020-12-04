@@ -20,19 +20,19 @@ const routes = [
 		meta: { title: 'Home | MFC Recruitments 2020', authwall: false }
 	},
 	{
-		path: '/profile',
+		path: '/user/profile',
 		name: 'Profile',
 		component: loadView('Profile'),
 		meta: { title: 'Profile | MFC Recruitment 2020', authwall: true }
 	},
 	{
-		path: '/login',
+		path: '/user/login',
 		name: 'Login',
 		component: loadView('Login'),
 		meta: { title: 'Login | MFC Recruitment 2020', authwall: false }
 	},
 	{
-		path: '/register',
+		path: '/user/register',
 		name: 'Register',
 		component: loadView('Register'),
 		meta: { title: 'Register | MFC Recruitment 2020', authwall: false }
@@ -77,13 +77,22 @@ const routes = [
 		}
 	},
 	{
+		path: '/test/rules',
+		name: 'TestRules',
+		component: loadView('TestRules'),
+		meta: {
+			title: 'Start your Test | Rules | MFC Recruitment 2020',
+			authwall: true
+		}
+	},
+	{
 		path: '/rules',
 		name: 'Rules',
 		component: loadView('Rules'),
 		meta: { title: 'Rules | MFC Recruitment 2020', authwall: false }
 	},
 	{
-		path: '/result',
+		path: '/user/result',
 		name: 'Result',
 		component: loadView('Result'),
 		meta: {
@@ -101,7 +110,7 @@ const routes = [
 		path: '/contact',
 		name: 'Contact',
 		component: loadView('Contact'),
-		meta: { title: 'Contact Us | MFC Recruitment 2020', authwall: true }
+		meta: { title: 'Contact Us | MFC Recruitment 2020', authwall: false }
 	}
 ];
 
@@ -136,11 +145,12 @@ router.beforeEach((to, from, next) => {
 		// this route requires auth, check if logged in
 		// if not, redirect to login page.
 		// Check if user is authenticated or not
-		if (localStorage.getItem('user.auth') === 'true') {
+		// eslint-disable-next-line no-constant-condition
+		if (false) {
 			next();
 		} else {
 			next({
-				path: '/login',
+				path: '/user/login',
 				query: { redirect: to.fullPath }
 			});
 		}

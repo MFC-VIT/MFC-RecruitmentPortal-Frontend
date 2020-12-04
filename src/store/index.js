@@ -8,6 +8,7 @@ export default new Vuex.Store({
 	state: {},
 	mutations: {},
 	actions: {
+		// eslint-disable-next-line no-unused-vars
 		register: ({ commit }, email1, username1, phone_number1, password1) => {
 			return new Promise((resolve, reject) => {
 				Axios.request('/api/register/', {
@@ -22,6 +23,7 @@ export default new Vuex.Store({
 						password: 'testpwd'
 					}
 				})
+					// eslint-disable-next-line no-unused-vars
 					.then(({ data, status }) => {
 						if (status === 201) {
 							resolve(true);
