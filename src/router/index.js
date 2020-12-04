@@ -16,7 +16,8 @@ const routes = [
 	{
 		path: '/',
 		name: 'Home',
-		component: Home
+		component: Home,
+		meta: { title: 'Home | MFC Recruitments 2020', authwall: false }
 	},
 	{
 		path: '/profile',
