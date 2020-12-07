@@ -17,7 +17,7 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: Home,
-		meta: { title: 'Home | MFC Recruitments 2020', authwall: false }
+		meta: { title: 'Home | MFC Recruitment 2020', authwall: false }
 	},
 	{
 		path: '/user/profile',
@@ -111,6 +111,25 @@ const routes = [
 		name: 'Contact',
 		component: loadView('Contact'),
 		meta: { title: 'Contact Us | MFC Recruitment 2020', authwall: false }
+	},
+	{
+		path: '/social/linkedin',
+		beforeEnter() {
+			location.href =
+				'https://in.linkedin.com/company/mozilla-firefox-club-vit';
+		}
+	},
+	{
+		path: '/social/facebook',
+		beforeEnter() {
+			location.href = 'https://www.facebook.com/mfcvit';
+		}
+	},
+	{
+		path: '/social/instagram',
+		beforeEnter() {
+			location.href = 'https://www.instagram.com/mfc_vit/';
+		}
 	}
 ];
 
