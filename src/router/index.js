@@ -172,6 +172,31 @@ router.afterEach(() => {
 	NProgress.done();
 });
 
+// router.beforeEach((to, from, next) => {
+// 	const nearestWithTitle = to.matched
+// 		.slice()
+// 		.reverse()
+// 		.find(r => r.meta && r.meta.title);
+// 	if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
+// 	if (to.matched.some(record => record.meta.authwall)) {
+// 		// this route requires auth, check if logged in
+// 		// if not, redirect to login page.
+// 		// Check if user is authenticated or not
+// 		// eslint-disable-next-line no-constant-condition
+// 		if (false) {
+// 			next();
+// 		} else {
+// 			next({
+// 				path: '/user/login',
+// 				query: { redirect: to.fullPath }
+// 			});
+// 		}
+// 	} else {
+// 		next();
+// 	}
+// });
+
+
 router.beforeEach((to, from, next) => {
 	const nearestWithTitle = to.matched
 		.slice()
@@ -182,13 +207,13 @@ router.beforeEach((to, from, next) => {
 		// this route requires auth, check if logged in
 		// if not, redirect to login page.
 		// Check if user is authenticated or not
-		// eslint-disable-next-line no-constant-condition
-		if (false) {
+		if (localStorage.getItem('authenticated') == true) {
 			next();
 		} else {
 			next({
-				path: '/user/login',
+				path: '/login',
 				query: { redirect: to.fullPath }
+				
 			});
 		}
 	} else {

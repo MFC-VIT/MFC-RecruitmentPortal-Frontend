@@ -1,21 +1,16 @@
-import axios from 'axios';
-import NProgress from 'nprogress';
+import axios from 'axios'
 
-const instance = axios.create({
-	baseURL: 'https://mfcrecruitment.herokuapp.com/'
-});
-instance.interceptors.request.use(config => {
-	NProgress.start();
-	return config;
-});
-instance.interceptors.response.use(
-	response => {
-		NProgress.done();
-		return response;
-	},
-	error => {
-		NProgress.done();
-		return Promise.reject(error);
-	}
-);
-export default instance;
+// const getAPI = axios.create({
+//     baseURL: 'https://mfcrecruitment.herokuapp.com/',
+//     timeout: 3000,
+//     headers: {
+//         Authorization: "Bearer " + localStorage.getItem('accessToken')
+//     }
+// })
+
+const API = axios.create({
+    baseURL: 'https://mfcrecruitment.herokuapp.com/',
+    timeout: 5000
+})
+
+export {API}

@@ -22,7 +22,7 @@
           <b-form-group id="input-group-2" label="OTP:" label-size="lg" label-for="input-2">
             <b-form-input
               id="input-2"
-              v-model="form.otp"
+              v-model="otp"
               pattern="[0-9]{6}"
               placeholder="Enter OTP"
               required
@@ -41,17 +41,24 @@
 export default {
   data() {
     return {
-      form: {
         email: "",
-        otp: ""
-      }
+        otp: null
     };
   },
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$router.push("/user/thanks");
-    }
+      this.$store.dispatch('userVerify', {
+              email:this.email,
+              otp: this.otp
+          })
+          .then(() => {
+              this.$router.push("/user/thanks");
+          })
+          .catch(err => {
+              console.log(err)
+          })
+     }
   }
 };
 </script>

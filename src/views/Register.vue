@@ -12,7 +12,7 @@
           >
             <b-form-input
               id="input-1"
-              v-model="form.email"
+              v-model="email"
               type="email"
               pattern="[A-Za-z0-9.]+@vitstudent.ac.in|[A-Za-z0-9.]+@vit.ac.in"
               placeholder="Enter email"
@@ -20,7 +20,7 @@
             ></b-form-input>
           </b-form-group>
           <b-form-group id="input-group-2" label="Name:" label-size="lg" label-for="input-2">
-            <b-form-input id="input-2" v-model="form.name" placeholder="Enter name" required></b-form-input>
+            <b-form-input id="input-2" v-model="username" placeholder="Enter name" required></b-form-input>
           </b-form-group>
           <b-form-group
             id="input-group-3"
@@ -30,7 +30,7 @@
           >
             <b-form-input
               id="input-3"
-              v-model="form.regno"
+              v-model="reg_no"
               pattern="[1-9]{2}[A-Za-z]{3}[0-9]{4}"
               placeholder="Enter registration number"
               required
@@ -39,7 +39,7 @@
           <b-form-group id="input-group-4" label="Password:" label-size="lg" label-for="input-4">
             <b-form-input
               id="input-4"
-              v-model="form.pwd"
+              v-model="password"
               placeholder="Enter password"
               type="password"
               autocomplete="new-password"
@@ -54,7 +54,7 @@
           >
             <b-form-input
               id="input-5"
-              v-model="form.phno"
+              v-model="phone"
               placeholder="Enter your phone number"
               pattern="[0-9]{10}"
               minlength="10"
@@ -77,22 +77,47 @@
 
 <script>
 export default {
-  data() {
-    return {
-      form: {
-        email: "",
-        name: "",
-        regno: "",
-        pwd: "",
-        phno: ""
+  data () {
+      return{
+          email :'',
+          username: '',
+          phone: '',
+          password : '',
+          reg_no:''
       }
-    };
   },
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$router.push("/user/verify");
-    }
+      this.$store.dispatch('userRegister', {
+              email:this.email,
+              username:this.username,
+              phone:this.phone,
+              password: this.password,
+              reg_no: this.reg_no
+          })
+          .then(() => {
+              this.$router.push({ name : 'Verify'})
+          })
+          .catch(err => {
+              console.log(err)
+          })
+    },
+    register(){
+          this.$store.dispatch('userRegister', {
+              email:this.email,
+              username:this.username,
+              phone:this.phone,
+              password: this.password,
+              reg_no: this.reg_no
+          })
+          .then(() => {
+              this.$router.push({ name : 'Verify'})
+          })
+          .catch(err => {
+              console.log(err)
+          })
+      }
   }
 };
 </script>
