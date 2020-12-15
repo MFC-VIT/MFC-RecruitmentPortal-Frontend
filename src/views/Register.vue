@@ -138,4 +138,7 @@ input:focus {
 label {
   margin-bottom: 0.2rem;
 }
+.text-moz-orange{
+  font-size: 23px;
+}
 </style>
