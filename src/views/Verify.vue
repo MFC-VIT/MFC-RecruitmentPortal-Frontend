@@ -15,7 +15,7 @@
               v-model="email"
               type="email"
               pattern="[A-Za-z0-9.]+@vitstudent.ac.in|[A-Za-z0-9.]+@vit.ac.in"
-              placeholder="Enter email"
+              placeholder="Enter VIT Email"
               required
             ></b-form-input>
           </b-form-group>
@@ -24,7 +24,7 @@
               id="input-2"
               v-model="otp"
               pattern="[0-9]{6}"
-              placeholder="Enter OTP"
+              placeholder="Enter OTP received on your mail"
               required
             ></b-form-input>
           </b-form-group>

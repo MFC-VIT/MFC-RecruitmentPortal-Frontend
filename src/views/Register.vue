@@ -65,11 +65,12 @@
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange" >Submit</b-button>
-          <router-link
+          <!-- <router-link
             class="text-moz-orange text-center"
             to="/user/verify"
-          >Already Registered, Verify Email here!</router-link>
+          >Already Registered? Verify Email here!</router-link> -->
         </b-form>
+        <b-button v-on:click = 'verify' block pill type="submit" variant="moz-orange" >Already Registered? Verify Email here!</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -103,6 +104,9 @@ export default {
               console.log(err)
           })
     },
+    verify(){
+      this.$router.push({ name : 'Verify'})
+    }
   }
 };
 </script>
@@ -120,7 +124,7 @@ export default {
 }
 .site-register-form {
   position: relative;
-  top: -5%;
+  top: -3%;
   width: 100%;
   left: 0%;
 }
