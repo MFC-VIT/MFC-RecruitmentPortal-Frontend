@@ -56,7 +56,7 @@ export default {
               this.$router.push("/user/thanks");
           })
           .catch(err => {
-              console.log(err)
+              alert(err)
           })
      }
   }

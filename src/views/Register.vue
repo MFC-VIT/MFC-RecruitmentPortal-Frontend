@@ -104,7 +104,7 @@ export default {
               this.$router.push({ name : 'Verify'})
           })
           .catch(err => {
-              console.log(err)
+              alert(err)
           })
     },
     verify(){

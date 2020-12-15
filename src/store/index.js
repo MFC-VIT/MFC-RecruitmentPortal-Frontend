@@ -77,12 +77,18 @@ export default new Vuex.Store({
           reg_no: usercredentials.reg_no
          })
         // eslint-disable-next-line
-        .then(response => {
-          resolve();
+        .then(({ data, status }) => {
+          if (status === 201) {
+            resolve(true);
+          }
         })
         .catch(error => {
-             reject(error)
-        })
+          if (error.response.status === 400)
+          {
+            reject(new Error("User with this email already exists."), null);
+          }
+          else reject(error.response.data.message);
+        });
       })
     },
  
@@ -94,13 +100,18 @@ export default new Vuex.Store({
           otp: parseInt(usercredentials.otp)
         })
         // eslint-disable-next-line
-        .then(response => {
-          resolve(true);
+        .then(({ data, status }) => {
+          if (status === 201) {
+            resolve(true);
+          }
         })
         .catch(error => {
-          console.log(error)
-             reject(error)
-        })
+          if (error.response.status === 400)
+          {
+            reject(new Error("Invalid Email or OTP. Try Again !!"), null);
+          }
+          else reject(error.response.data.message);
+        });
       })
     },
 
