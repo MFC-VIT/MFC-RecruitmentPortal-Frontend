@@ -31,7 +31,7 @@
             <b-form-input
               id="input-3"
               v-model="reg_no"
-              pattern="[1-9]{2}[A-Za-z]{3}[0-9]{4}"
+              pattern="[0-9]{2}[A-Za-z]{3}[0-9]{4}"
               placeholder="Enter registration number"
               minlength="9"
               maxlength="9"
