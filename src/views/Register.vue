@@ -15,7 +15,7 @@
               v-model="email"
               type="email"
               pattern="[A-Za-z0-9.]+@vitstudent.ac.in|[A-Za-z0-9.]+@vit.ac.in"
-              placeholder="Enter email"
+              placeholder="Enter VIT Email"
               required
             ></b-form-input>
           </b-form-group>
@@ -33,6 +33,8 @@
               v-model="reg_no"
               pattern="[1-9]{2}[A-Za-z]{3}[0-9]{4}"
               placeholder="Enter registration number"
+              minlength="9"
+              maxlength="9"
               required
             ></b-form-input>
           </b-form-group>
