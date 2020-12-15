@@ -38,6 +38,15 @@ const routes = [
 		meta: { title: 'Register | MFC Recruitment 2020', authwall: false }
 	},
 	{
+		path: '/user/verify',
+		name: 'Verify',
+		component: loadView('Verify'),
+		meta: {
+			title: 'Verify your Email | MFC Recruitment 2020',
+			authwall: false
+		}
+	},
+	{
 		path: '/test/technical',
 		name: 'Technical',
 		component: loadView('Technical'),

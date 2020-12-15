@@ -65,6 +65,10 @@
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange">Submit</b-button>
+          <router-link
+            class="text-moz-orange text-center"
+            to="/user/verify"
+          >Already Registered, Verify Email here!</router-link>
         </b-form>
       </b-col>
     </b-row>
@@ -87,7 +91,7 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$router.push("/user/thanks");
+      this.$router.push("/user/verify");
     }
   }
 };
@@ -100,7 +104,7 @@ export default {
 }
 .site-register-logo {
   position: relative;
-  top: -10%;
+  top: -50px;
   width: 20%;
   left: 40%;
 }

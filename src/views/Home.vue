@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row align-v="center">
-      <b-col cols="12" md="0">
+      <b-col offset="3" cols="6" class="d-md-none">
         <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
       </b-col>
       <b-col cols="12" md="8">
@@ -25,7 +25,7 @@
           <b-button size="lg" @click="rejectLogin" squared variant="outline-light" class="m-2">Login</b-button>
         </div>
       </b-col>
-      <b-col cols="0" md="4">
+      <b-col class="d-none d-md-block" md="4">
         <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
       </b-col>
     </b-row>
@@ -63,26 +63,48 @@ export default {
 </script>
 
 <style scoped>
-@media screen {
+@media screen and (min-width: 769px) {
+  .site-home-text-1 {
+    color: #e66100;
+    font-size: 5.5rem;
+  }
+  .site-home-text-2 {
+    color: white;
+    font-size: 5.5rem;
+  }
+  .site-home-text-3 {
+    color: white;
+    font-size: 1.25rem;
+  }
+  .site-home-text-4 {
+    color: #e66100;
+    font-size: 1.25rem;
+  }
+  .site-home-text-5 {
+    color: white;
+    font-size: 1.25rem;
+  }
 }
-.site-home-text-1 {
-  color: #e66100;
-  font-size: 5.5rem;
-}
-.site-home-text-2 {
-  color: white;
-  font-size: 5.5rem;
-}
-.site-home-text-3 {
-  color: white;
-  font-size: 1.25rem;
-}
-.site-home-text-4 {
-  color: #e66100;
-  font-size: 1.25rem;
-}
-.site-home-text-5 {
-  color: white;
-  font-size: 1.25rem;
+@media screen and (max-width: 768px) {
+  .site-home-text-1 {
+    color: #e66100;
+    font-size: 2.5rem;
+  }
+  .site-home-text-2 {
+    color: white;
+    font-size: 2.5rem;
+  }
+  .site-home-text-3 {
+    color: white;
+    font-size: 1rem;
+  }
+  .site-home-text-4 {
+    color: #e66100;
+    font-size: 1rem;
+  }
+  .site-home-text-5 {
+    color: white;
+    font-size: 1rem;
+  }
 }
 </style>
