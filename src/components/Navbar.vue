@@ -1,6 +1,6 @@
 <template>
   <b-navbar size="lg" toggleable="lg" type="dark" variant="moz-transparent">
-    <b-navbar-brand class="ml-5" to="/">
+    <b-navbar-brand class="ml-md-5 d-none d-md-block" to="/">
       <div class="site-nav-brand">MFC-VIT</div>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

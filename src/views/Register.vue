@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row alogn-v="center" align-h="center">
-      <b-col cols="12" md="6" class="site-register-main mt-md-5">
+      <b-col cols="11" md="6" class="site-register-main mt-md-5">
         <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-register-logo" />
         <b-form @submit="onSubmit" class="pb-2 text-white site-register-form">
           <b-form-group
@@ -42,6 +42,24 @@
               v-model="form.pwd"
               placeholder="Enter password"
               type="password"
+              autocomplete="new-password"
+              required
+            ></b-form-input>
+          </b-form-group>
+          <b-form-group
+            id="input-group-5"
+            label="Phone Number:"
+            label-size="lg"
+            label-for="input-5"
+          >
+            <b-form-input
+              id="input-5"
+              v-model="form.phno"
+              placeholder="Enter your phone number"
+              pattern="[0-9]{10}"
+              minlength="10"
+              autocomplete="tel"
+              maxlength="10"
               required
             ></b-form-input>
           </b-form-group>
@@ -61,7 +79,8 @@ export default {
         email: "",
         name: "",
         regno: "",
-        pwd: ""
+        pwd: "",
+        phno: ""
       }
     };
   },
@@ -97,6 +116,7 @@ body {
 input,
 input:focus {
   background: black;
+  color: white;
   border: 2px solid #e66100;
   border-radius: 10px;
 }

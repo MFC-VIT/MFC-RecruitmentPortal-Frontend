@@ -1,6 +1,9 @@
 <template>
   <b-container>
     <b-row align-v="center">
+      <b-col cols="12" md="0">
+        <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
+      </b-col>
       <b-col cols="12" md="8">
         <h1 class="site-home-text-1">Mozilla</h1>
         <h1 class="site-home-text-2">Firefox Club-VIT</h1>
@@ -8,9 +11,9 @@
           class="site-home-text-3"
         >is one of the largest developers' communities in VIT University aiding you to change your ideas into reality. It is a technical club dedicated to expand the technical know-how and productivity of all the future engineers and scientists. it is a common platform for intercollege Technical Activities. Under the precious guidance of the faculty members, this club is all set to and will create new horizons in the development of the college.</p>
         <br />
-        <p
+        <!-- <p
           class="site-home-text-4"
-        >Attempt the Test, if you think you have what it takes to be a part of us ;)</p>
+        >Attempt the Test, if you think you have what it takes to be a part of us ;)</p>-->
         <div class="d-flex d-inline-flex">
           <b-button
             size="lg"
@@ -22,7 +25,7 @@
           <b-button size="lg" @click="rejectLogin" squared variant="outline-light" class="m-2">Login</b-button>
         </div>
       </b-col>
-      <b-col cols="12" md="4">
+      <b-col cols="0" md="4">
         <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
       </b-col>
     </b-row>
@@ -60,6 +63,8 @@ export default {
 </script>
 
 <style scoped>
+@media screen {
+}
 .site-home-text-1 {
   color: #e66100;
   font-size: 5.5rem;
