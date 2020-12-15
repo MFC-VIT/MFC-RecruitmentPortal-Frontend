@@ -65,12 +65,13 @@
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange" >Submit</b-button>
+          <b-button v-on:click = 'verify' block pill variant="moz-orange" >Already Registered? Verify Email here!</b-button>
           <!-- <router-link
             class="text-moz-orange text-center"
             to="/user/verify"
           >Already Registered? Verify Email here!</router-link> -->
         </b-form>
-        <b-button v-on:click = 'verify' block pill type="submit" variant="moz-orange" >Already Registered? Verify Email here!</b-button>
+        
       </b-col>
     </b-row>
   </b-container>
@@ -142,7 +143,5 @@ input:focus {
 label {
   margin-bottom: 0.2rem;
 }
-.text-moz-orange{
-  font-size: 23px;
-}
+
 </style>
