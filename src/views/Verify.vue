@@ -12,7 +12,7 @@
           >
             <b-form-input
               id="input-1"
-              v-model="form.email"
+              v-model="email"
               type="email"
               pattern="[A-Za-z0-9.]+@vitstudent.ac.in|[A-Za-z0-9.]+@vit.ac.in"
               placeholder="Enter email"

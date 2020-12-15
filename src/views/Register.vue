@@ -64,7 +64,7 @@
             ></b-form-input>
           </b-form-group>
           <br />
-          <b-button block pill type="submit" variant="moz-orange">Submit</b-button>
+          <b-button block pill type="submit" variant="moz-orange" >Submit</b-button>
           <router-link
             class="text-moz-orange text-center"
             to="/user/verify"
@@ -103,21 +103,6 @@ export default {
               console.log(err)
           })
     },
-    register(){
-          this.$store.dispatch('userRegister', {
-              email:this.email,
-              username:this.username,
-              phone:this.phone,
-              password: this.password,
-              reg_no: this.reg_no
-          })
-          .then(() => {
-              this.$router.push({ name : 'Verify'})
-          })
-          .catch(err => {
-              console.log(err)
-          })
-      }
   }
 };
 </script>
