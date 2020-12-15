@@ -15,7 +15,7 @@
 .site-login-logo {
   position: relative;
   bottom: 50%;
-  width: 20%;
-  left: 40%;
+  width: 18%;
+  left: 41%;
 }
 </style>

@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss">
-@import "assets/sass/bv-custom.sass";
+@import "assets/sass/bv-custom.scss";
 </style>
 
 <style>

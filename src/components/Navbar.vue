@@ -1,14 +1,14 @@
 <template>
-  <b-navbar size="lg" toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand class="ml-5" href="/">
+  <b-navbar size="lg" toggleable="lg" type="dark" variant="moz-transparent">
+    <b-navbar-brand class="ml-5" to="/">
       <div class="site-nav-brand">MFC-VIT</div>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto h3">
         <b-nav-item class="p-2" href="https://mfcvit.in/">Our Website</b-nav-item>
-        <b-nav-item class="p-2" to="/contact">Contact Us</b-nav-item>
-        <b-nav-item class="p-2" to="/rules">Rules</b-nav-item>
+        <!-- <b-nav-item class="p-2" to="/contact">Contact Us</b-nav-item> -->
+        <!-- <b-nav-item class="p-2" to="/rules">Rules</b-nav-item> -->
         <b-nav-item class="p-2" to="/social/instagram">
           <i class="fab fa-instagram"></i>
         </b-nav-item>

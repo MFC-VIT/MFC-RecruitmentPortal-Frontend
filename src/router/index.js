@@ -101,6 +101,15 @@ const routes = [
 		}
 	},
 	{
+		path: '/user/thanks',
+		name: 'Thanks',
+		component: loadView('Thanks'),
+		meta: {
+			title: 'Thanks for Registering | MFC Recruitment 2020',
+			authwall: false
+		}
+	},
+	{
 		path: '/test',
 		name: 'Test',
 		component: loadView('Test'),

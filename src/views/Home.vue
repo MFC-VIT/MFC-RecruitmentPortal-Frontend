@@ -19,8 +19,7 @@
             variant="outline-light"
             class="m-2"
           >Sign Up</b-button>
-          <b-button size="lg" to="/user/login" squared variant="outline-light" class="m-2">Login</b-button>
-          <!-- <div class="site-home-text-5 m-2">We are Hiring!!!</div> -->
+          <b-button size="lg" @click="rejectLogin" squared variant="outline-light" class="m-2">Login</b-button>
         </div>
       </b-col>
       <b-col cols="12" md="4">
@@ -50,6 +49,11 @@ export default {
         .catch(error => {
           alert(error);
         });
+    },
+    rejectLogin() {
+      alert(
+        "Login is currently not allowed! Please register yourself and you'll be notified when the recruitment process is live and you will be able to login then!"
+      );
     }
   }
 };
