@@ -31,7 +31,7 @@
             <b-form-input
               id="input-3"
               v-model="reg_no"
-              pattern="2[0-9]{1}[A-Za-z]{3}[0-9]{4}"
+              pattern="20[A-Za-z]{3}[0-9]{4}"
               placeholder="Enter registration number"
               minlength="9"
               maxlength="9"
@@ -66,14 +66,18 @@
             ></b-form-input>
           </b-form-group>
           <br />
-          <b-button block pill type="submit" variant="moz-orange" >Submit</b-button>
-          <b-button v-on:click = 'verify' block pill variant="moz-orange" >Already Registered? Verify Email here!</b-button>
+          <b-button block pill type="submit" variant="moz-orange">Submit</b-button>
+          <b-button
+            v-on:click="verify"
+            block
+            pill
+            variant="moz-orange"
+          >Already Registered? Verify Email here!</b-button>
           <!-- <router-link
             class="text-moz-orange text-center"
             to="/user/verify"
-          >Already Registered? Verify Email here!</router-link> -->
+          >Already Registered? Verify Email here!</router-link>-->
         </b-form>
-        
       </b-col>
     </b-row>
   </b-container>
@@ -81,34 +85,35 @@
 
 <script>
 export default {
-  data () {
-      return{
-          email :'',
-          username: '',
-          phone: '',
-          password : '',
-          reg_no:''
-      }
+  data() {
+    return {
+      email: "",
+      username: "",
+      phone: "",
+      password: "",
+      reg_no: ""
+    };
   },
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$store.dispatch('userRegister', {
-              email:this.email,
-              username:this.username,
-              phone:this.phone,
-              password: this.password,
-              reg_no: this.reg_no
-          })
-          .then(() => {
-              this.$router.push({ name : 'Verify'})
-          })
-          .catch(err => {
-              alert(err)
-          })
+      this.$store
+        .dispatch("userRegister", {
+          email: this.email,
+          username: this.username,
+          phone: this.phone,
+          password: this.password,
+          reg_no: this.reg_no
+        })
+        .then(() => {
+          this.$router.push({ name: "Verify" });
+        })
+        .catch(err => {
+          alert(err);
+        });
     },
-    verify(){
-      this.$router.push({ name : 'Verify'})
+    verify() {
+      this.$router.push({ name: "Verify" });
     }
   }
 };
@@ -145,5 +150,4 @@ input:focus {
 label {
   margin-bottom: 0.2rem;
 }
-
 </style>
