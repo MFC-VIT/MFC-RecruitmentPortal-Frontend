@@ -58,10 +58,7 @@
               id="input-5"
               v-model="phone"
               placeholder="Enter your phone number"
-              pattern="[0-9]{10}"
-              minlength="10"
               autocomplete="tel"
-              maxlength="10"
               required
             ></b-form-input>
           </b-form-group>
