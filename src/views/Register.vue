@@ -70,6 +70,12 @@
             pill
             variant="moz-orange"
           >Already Registered? Verify Email here!</b-button>
+          <b-button
+            href="https://teams.microsoft.com/l/channel/19%3a4492da6b902a44c08dd2045b66599151%40thread.tacv2/Recruitment%25202020?groupId=030d60ad-5dae-48de-a1a9-9f250eeafec9&tenantId=d4963ce2-af94-4122-95a9-644e8b01624d"
+            block
+            pill
+            variant="moz-orange"
+          >Join Our Outreach Team!</b-button>
           <!-- <router-link
             class="text-moz-orange text-center"
             to="/user/verify"
