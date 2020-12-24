@@ -76,10 +76,6 @@
             pill
             variant="moz-orange"
           >Join Our Outreach Team!</b-button>
-          <!-- <router-link
-            class="text-moz-orange text-center"
-            to="/user/verify"
-          >Already Registered? Verify Email here!</router-link>-->
         </b-form>
       </b-col>
     </b-row>
@@ -129,6 +125,7 @@ export default {
 }
 .site-register-logo {
   position: relative;
+  background-color: rgba(0, 0, 0, 0);
   top: -50px;
   width: 20%;
   left: 40%;

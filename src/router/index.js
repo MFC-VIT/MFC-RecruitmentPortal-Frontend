@@ -20,12 +20,6 @@ const routes = [
 		meta: { title: 'Home | MFC Recruitment 2020', authwall: false }
 	},
 	{
-		path: '/user/profile',
-		name: 'Profile',
-		component: loadView('Profile'),
-		meta: { title: 'Profile | MFC Recruitment 2020', authwall: true }
-	},
-	{
 		path: '/user/login',
 		name: 'Login',
 		component: loadView('Login'),
@@ -43,6 +37,24 @@ const routes = [
 		component: loadView('Verify'),
 		meta: {
 			title: 'Verify your Email | MFC Recruitment 2020',
+			authwall: false
+		}
+	},
+	{
+		path: '/user/reset',
+		name: 'Reset',
+		component: loadView('Reset'),
+		meta: {
+			title: 'Reset your Password | MFC Recruitment 2020',
+			authwall: false
+		}
+	},
+	{
+		path: '/user/newpassword/:/:',
+		name: 'NewPassword',
+		component: loadView('NewPassword'),
+		meta: {
+			title: 'Set New Password | MFC Recruitment 2020',
 			authwall: false
 		}
 	},
@@ -71,12 +83,6 @@ const routes = [
 		meta: { title: 'Design Round 1 | MFC Recruitment 2020', authwall: true }
 	},
 	{
-		path: '/test/media',
-		name: 'Media',
-		component: loadView('Media'),
-		meta: { title: 'Media Round 1 | MFC Recruitment 2020', authwall: true }
-	},
-	{
 		path: '/test/editorial',
 		name: 'Editorial',
 		component: loadView('Editorial'),
@@ -91,7 +97,7 @@ const routes = [
 		component: loadView('TestRules'),
 		meta: {
 			title: 'Start your Test | Rules | MFC Recruitment 2020',
-			authwall: true
+			authwall: false
 		}
 	},
 	{
@@ -122,7 +128,7 @@ const routes = [
 		path: '/test',
 		name: 'Test',
 		component: loadView('Test'),
-		meta: { title: 'Take Tests | MFC Recruitment 2020', authwall: true }
+		meta: { title: 'Take Tests | MFC Recruitment 2020', authwall: false }
 	},
 	{
 		path: '/contact',
@@ -196,7 +202,6 @@ router.afterEach(() => {
 // 	}
 // });
 
-
 router.beforeEach((to, from, next) => {
 	const nearestWithTitle = to.matched
 		.slice()
@@ -213,7 +218,6 @@ router.beforeEach((to, from, next) => {
 			next({
 				path: '/login',
 				query: { redirect: to.fullPath }
-				
 			});
 		}
 	} else {

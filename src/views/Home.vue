@@ -22,7 +22,7 @@
             variant="outline-light"
             class="m-2"
           >Sign Up</b-button>
-          <b-button size="lg" @click="rejectLogin" squared variant="outline-light" class="m-2">Login</b-button>
+          <b-button size="lg" to="/user/login" squared variant="outline-light" class="m-2">Login</b-button>
         </div>
       </b-col>
       <b-col class="d-none d-md-block" md="4">

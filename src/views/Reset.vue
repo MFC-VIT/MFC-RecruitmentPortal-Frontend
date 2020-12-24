@@ -1,9 +1,9 @@
 <template>
   <b-container>
     <b-row alogn-v="center" align-h="center">
-      <b-col cols="11" md="6" class="site-login-main mt-md-5">
-        <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-login-logo" />
-        <b-form @submit="onSubmit" class="pb-2 text-white site-login-form">
+      <b-col cols="11" md="6" class="site-reset-main mt-md-5">
+        <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-reset-logo" />
+        <b-form @submit="onSubmit" class="pb-2 text-white site-reset-form">
           <b-form-group
             id="input-group-1"
             label="VIT Email Address:"
@@ -19,19 +19,8 @@
               required
             ></b-form-input>
           </b-form-group>
-          <b-form-group id="input-group-4" label="Password:" label-size="lg" label-for="input-4">
-            <b-form-input
-              id="input-4"
-              v-model="password"
-              placeholder="Enter password"
-              type="password"
-              autocomplete="new-password"
-              required
-            ></b-form-input>
-            <div to="/user/reset" class="text-moz-orange text-right mt-1">Forgot Password?</div>
-          </b-form-group>
           <br />
-          <b-button block pill type="submit" variant="moz-orange">Login</b-button>
+          <b-button block pill type="submit" variant="moz-orange">Reset Password</b-button>
         </b-form>
       </b-col>
     </b-row>
@@ -42,8 +31,7 @@
 export default {
   data() {
     return {
-      email: "",
-      password: ""
+      email: ""
     };
   },
   methods: {
@@ -66,17 +54,17 @@ export default {
 </script>
 
 <style scoped>
-.site-login-main {
+.site-reset-main {
   background-color: rgba(128, 179, 240, 0.26);
   border-radius: 10px;
 }
-.site-login-logo {
+.site-reset-logo {
   position: relative;
   top: -50px;
   width: 20%;
   left: 40%;
 }
-.site-login-form {
+.site-reset-form {
   position: relative;
   top: -3%;
   width: 100%;
