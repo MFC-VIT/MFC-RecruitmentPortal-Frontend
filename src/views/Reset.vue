@@ -37,17 +37,17 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$store
-        .dispatch("userLogin", {
-          email: this.email,
-          password: this.password
-        })
-        .then(() => {
-          this.$router.push({ name: "Test" });
-        })
-        .catch(err => {
-          alert(err);
-        });
+      // this.$store
+      //   .dispatch("resetPassword", {
+      //     email: this.email
+      //   })
+      //   .then(() => {
+      //     this.$router.push({ name: "NewPassword" });
+      //   })
+      //   .catch(err => {
+      //     alert(err);
+      //   });
+      this.$router.push({ name: "NewPassword" });
     }
   }
 };

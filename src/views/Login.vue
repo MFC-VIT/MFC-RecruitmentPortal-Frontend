@@ -28,7 +28,7 @@
               autocomplete="new-password"
               required
             ></b-form-input>
-            <div to="/user/reset" class="text-moz-orange text-right mt-1">Forgot Password?</div>
+            <div @click="resetPassword" class="text-moz-orange text-right mt-1">Forgot Password?</div>
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange">Login</b-button>
@@ -60,6 +60,9 @@ export default {
         .catch(err => {
           alert(err);
         });
+    },
+    resetPassword() {
+      this.$router.push({ name: "Reset" });
     }
   }
 };

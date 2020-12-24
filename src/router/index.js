@@ -50,11 +50,20 @@ const routes = [
 		}
 	},
 	{
-		path: '/user/newpassword/:/:',
+		path: '/user/newpassword/:uid/:token',
 		name: 'NewPassword',
 		component: loadView('NewPassword'),
 		meta: {
 			title: 'Set New Password | MFC Recruitment 2020',
+			authwall: false
+		}
+	},
+	{
+		path: '/user/reseted',
+		name: 'Reseted',
+		component: loadView('Reseted'),
+		meta: {
+			title: 'New Password Set | MFC Recruitment 2020',
 			authwall: false
 		}
 	},
