@@ -168,7 +168,6 @@ export default new Vuex.Store({
 				.get('https://mfcrecruitment.herokuapp.com/api/user_test/')
 				.then(response => {
 					context.commit('setTestStatus', response);
-					resolve(true);
 				});
 		},
 
