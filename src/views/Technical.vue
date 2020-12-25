@@ -62,18 +62,19 @@ export default {
       this.questions.mcq.forEach(el => {
         console.log(document.getElementsByName(el.question_id));
         this.answers.push({
-          domain: 1,
+          domain: "1",
           question: el.question,
           answer: document.getElementsByName(el.question_id)[0].value
         });
       });
       this.questions.write.forEach(el => {
         this.answers.push({
-          domain: 1,
+          domain: "1",
           question: el.question,
           answer: document.getElementsByName(el.question_id)[0].value
         });
       });
+      // eslint-disable-next-line
       return new Promise((resolve, reject) => {
         getAPI
           .post(

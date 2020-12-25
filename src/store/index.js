@@ -156,7 +156,7 @@ export default new Vuex.Store({
 			});
 		},
 
-		async getTest(context, { dispatch }) {
+		async getTest({ dispatch }) {
 			await dispatch('getRefreshToken');
 			getAPI = axios.create({
 				headers: {
@@ -167,7 +167,13 @@ export default new Vuex.Store({
 			getAPI
 				.get('https://mfcrecruitment.herokuapp.com/api/user_test/')
 				.then(response => {
-					context.commit('setTestStatus', response);
+					localStorage.setItem('Tech', response.data.technical),
+						localStorage.setItem(
+							'Manage',
+							response.data.management
+						),
+						localStorage.setItem('Edi', response.data.editorial),
+						localStorage.setItem('Design', response.data.design);
 				});
 		},
 
@@ -201,7 +207,7 @@ export default new Vuex.Store({
 			});
 		},
 
-		async getEdi({ dispatch }) {
+		async getEditorial({ dispatch }) {
 			await dispatch('getRefreshToken');
 			getAPI = axios.create({
 				headers: {

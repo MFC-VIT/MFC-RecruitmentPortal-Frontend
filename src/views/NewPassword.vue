@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <b-row v-if="isTokenVerified" align-v="center" align-h="center">
+    <b-row align-v="center" align-h="center">
       <b-col cols="11" md="6" class="site-newpwd-main mt-md-5">
         <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-newpwd-logo" />
         <b-form @submit="onSubmit" class="pb-2 text-white site-newpwd-form">
@@ -20,15 +20,15 @@
             ></b-form-input>
           </b-form-group>
           <br />
-          <b-button block pill type="submit" variant="moz-orange">Reset Password</b-button>
+          <b-button @click="onSubmit" block pill type="submit" variant="moz-orange">Reset Password</b-button>
         </b-form>
       </b-col>
     </b-row>
-    <b-row v-if="!isTokenVerified">
+    <!-- <b-row v-if="!isTokenVerified">
       <b-col>
         <h2 class="text-center text-moz-orange">Invalid Token!</h2>
       </b-col>
-    </b-row>
+    </b-row>-->
   </b-container>
 </template>
 
@@ -36,34 +36,34 @@
 export default {
   data() {
     return {
-      password: "",
-      isTokenVerified: false
+      password: ""
+      // isTokenVerified: false
     };
   },
-  beforeMount() {
-    this.initVerify();
-  },
+  // beforeMount() {
+  //   this.initVerify();
+  // },
   methods: {
-    initVerify() {
-      this.$store
-        .dispatch("resetVerifyToken", {
-          uidb64: this.$router.params.uid,
-          token: this.$router.params.token
-        })
-        .then(() => {
-          this.isTokenVerified = true;
-        })
-        .catch(err => {
-          alert(err);
-        });
-    },
+    // initVerify() {
+    //   this.$store
+    //     .dispatch("resetVerifyToken", {
+    //       uidb64: this.$router.params.uid,
+    //       token: this.$router.params.token
+    //     })
+    //     .then(() => {
+    //       this.isTokenVerified = true;
+    //     })
+    //     .catch(err => {
+    //       alert(err);
+    //     });
+    // },
     onSubmit(event) {
       event.preventDefault();
       this.$store
         .dispatch("resetSetNewPassword", {
           password: this.password,
-          uidb64: this.$router.params.uid,
-          token: this.$router.params.token
+          uidb64: this.$route.params.uid,
+          token: this.$route.params.token
         })
         .then(() => {
           this.$router.push({ name: "Reseted" });

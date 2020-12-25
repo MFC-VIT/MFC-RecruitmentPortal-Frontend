@@ -13,8 +13,9 @@
             class="text-justify px-3 pb-4"
           >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi officia, molestiae repellat eveniet eos voluptatem pariatur velit nam ratione consequuntur provident dignissimos? Itaque velit porro natus fugiat, architecto cupiditate aliquid.</h5>
         </div>
+        <br />
         <div class="site-test-card m-4" @click="takeDesign">
-          <h3 class="text-center p-4">Design</h3>
+          <h3 class="text-center p-4">Design & Media</h3>
           <h5
             class="text-justify px-3 pb-4"
           >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi officia, molestiae repellat eveniet eos voluptatem pariatur velit nam ratione consequuntur provident dignissimos? Itaque velit porro natus fugiat, architecto cupiditate aliquid.</h5>
@@ -27,6 +28,7 @@
             class="text-justify px-3 pb-4"
           >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi officia, molestiae repellat eveniet eos voluptatem pariatur velit nam ratione consequuntur provident dignissimos? Itaque velit porro natus fugiat, architecto cupiditate aliquid.</h5>
         </div>
+        <br />
         <div class="site-test-card m-4" @click="takeEditorial">
           <h3 class="text-center p-4">Editorial</h3>
           <h5
@@ -54,29 +56,28 @@ export default {
   },
   methods: {
     takeTech() {
-      console.log(this.$store.state.Tech);
-      if (this.$store.state.Tech)
+      if (localStorage.getItem("Tech") == "true")
         alert(
           "You have already attempted the Technical test! You can attempt it only once!"
         );
       else this.$router.push({ name: "TechnicalRules" });
     },
     takeDesign() {
-      if (this.$store.state.Manage)
+      if (localStorage.getItem("Design") == "true")
         alert(
           "You have already attempted the Design & Media test! You can attempt it only once!"
         );
       else this.$router.push({ name: "DesignRules" });
     },
     takeMgmt() {
-      if (this.$store.state.Design)
+      if (localStorage.getItem("Manage") == "true")
         alert(
           "You have already attempted the Management test! You can attempt it only once!"
         );
       else this.$router.push({ name: "MgmtRules" });
     },
     takeEditorial() {
-      if (this.$store.state.Edi)
+      if (localStorage.getItem("Edi") == "true")
         alert(
           "You have already attempted the Editorial test! You can attempt it only once!"
         );
