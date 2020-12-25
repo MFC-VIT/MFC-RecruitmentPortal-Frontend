@@ -40,7 +40,7 @@
   border-radius: 10px;
 }
 li {
-  list-style-image: url("./../assets/img/bullet.png");
+  list-style-image: url("../assets/img/bullet.png");
 }
 </style>
 
