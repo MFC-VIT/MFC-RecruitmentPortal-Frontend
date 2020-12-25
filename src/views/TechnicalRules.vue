@@ -7,16 +7,20 @@
         </h1>
         <br />
         <ul>
-          <li>
-            <h4>You can only attempt the test for a domain only once.</h4>
+          <li class="p-1">
+            <h3>You can only attempt the test for a domain only once.</h3>
           </li>
-          <li>
-            <h4>The test shall be autosubmitted as soon as the time alloted is completed.</h4>
+          <li class="p-1">
+            <h3>The test shall be autosubmitted as soon as the time alloted is completed.</h3>
           </li>
-          <li>
-            <h4>If you attempt to refresh the page your answers shall not be saved and you may get different questions.</h4>
+          <li class="p-1">
+            <h3>If you attempt to refresh the page your answers shall not be saved and you may get different questions.</h3>
+          </li>
+          <li class="p-1">
+            <h3>This test has a time limit of XYZ minutes!</h3>
           </li>
         </ul>
+        <br />
         <div>
           <b-button @click="goNext" variant="moz-orange" style="float: left" class="px-2">
             <div class="px-3">Accept</div>
@@ -35,19 +39,21 @@
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
 }
-li::before {
-  /* list-style-image: url("../assets/img/bullet.PNG"); */
+li {
+  list-style-image: url("./../assets/img/bullet.png");
 }
 </style>
 
 <script>
 export default {
-  name: "Rules",
+  name: "TechnicalRules",
   methods: {
     goBack() {
       this.$router.push({ name: "Test" });
     },
-    goNext() {}
+    goNext() {
+      this.$router.push({ name: "Technical" });
+    }
   }
 };
 </script>

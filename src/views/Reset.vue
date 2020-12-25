@@ -26,7 +26,6 @@
     </b-row>
   </b-container>
 </template>
-
 <script>
 export default {
   data() {
@@ -37,17 +36,16 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      // this.$store
-      //   .dispatch("resetPassword", {
-      //     email: this.email
-      //   })
-      //   .then(() => {
-      //     this.$router.push({ name: "NewPassword" });
-      //   })
-      //   .catch(err => {
-      //     alert(err);
-      //   });
-      this.$router.push({ name: "NewPassword" });
+      this.$store
+        .dispatch("resetSendMail", {
+          email: this.email
+        })
+        .then(() => {
+          alert("Email Sent Successfully!");
+        })
+        .catch(err => {
+          alert(err);
+        });
     }
   }
 };

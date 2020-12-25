@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <b-row v-if="isTokenVerified=='1'" align-v="center" align-h="center">
+    <b-row v-if="isTokenVerified" align-v="center" align-h="center">
       <b-col cols="11" md="6" class="site-newpwd-main mt-md-5">
         <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-newpwd-logo" />
         <b-form @submit="onSubmit" class="pb-2 text-white site-newpwd-form">
@@ -24,7 +24,7 @@
         </b-form>
       </b-col>
     </b-row>
-    <b-row v-if="isTokenVerified=='0'">
+    <b-row v-if="!isTokenVerified">
       <b-col>
         <h2 class="text-center text-moz-orange">Invalid Token!</h2>
       </b-col>
@@ -37,37 +37,40 @@ export default {
   data() {
     return {
       password: "",
-      isTokenVerified: "1"
+      isTokenVerified: false
     };
+  },
+  beforeMount() {
+    this.initVerify();
   },
   methods: {
     initVerify() {
-      event.preventDefault();
       this.$store
-        .dispatch("resetEmail", {
-          uid: this.$router.params.uid,
+        .dispatch("resetVerifyToken", {
+          uidb64: this.$router.params.uid,
           token: this.$router.params.token
         })
         .then(() => {
-          isTokenVerified = "1";
+          this.isTokenVerified = true;
         })
         .catch(err => {
           alert(err);
         });
     },
     onSubmit(event) {
-      // event.preventDefault();
-      // this.$store
-      //   .dispatch("userLogin", {
-      //     password: this.password
-      //   })
-      //   .then(() => {
-      //     this.$router.push({ name: "Reseted" });
-      //   })
-      //   .catch(err => {
-      //     alert(err);
-      //   });
-      this.$router.push({ name: "Reseted" });
+      event.preventDefault();
+      this.$store
+        .dispatch("resetSetNewPassword", {
+          password: this.password,
+          uidb64: this.$router.params.uid,
+          token: this.$router.params.token
+        })
+        .then(() => {
+          this.$router.push({ name: "Reseted" });
+        })
+        .catch(err => {
+          alert(err);
+        });
     }
   }
 };

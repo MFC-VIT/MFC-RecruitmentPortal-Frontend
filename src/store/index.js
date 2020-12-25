@@ -28,6 +28,12 @@ export default new Vuex.Store({
 	mutations: {
 		setAuthentication(state) {
 			state.authenticated = !state.authenticated;
+		},
+		setTestStatus(state, response) {
+			state.Tech = response.data.technical;
+			state.Manage = response.data.management;
+			state.Design = response.data.design;
+			state.Edi = response.data.editorial;
 		}
 	},
 	actions: {
@@ -150,7 +156,7 @@ export default new Vuex.Store({
 			});
 		},
 
-		async getTest({ dispatch }) {
+		async getTest(context, { dispatch }) {
 			await dispatch('getRefreshToken');
 			getAPI = axios.create({
 				headers: {
@@ -161,13 +167,8 @@ export default new Vuex.Store({
 			getAPI
 				.get('https://mfcrecruitment.herokuapp.com/api/user_test/')
 				.then(response => {
-					localStorage.setItem('Tech', response.data.technical),
-						localStorage.setItem(
-							'Manage',
-							response.data.management
-						),
-						localStorage.setItem('Edi', response.data.editorial),
-						localStorage.setItem('Design', response.data.design);
+					context.commit('setTestStatus', response);
+					resolve(true);
 				});
 		},
 
@@ -208,6 +209,61 @@ export default new Vuex.Store({
 					Authorization:
 						'Bearer ' + localStorage.getItem('accessToken')
 				}
+			});
+		},
+
+		resetSendMail(context, usercredentials) {
+			// eslint-disable-next-line
+			return new Promise((resolve, reject) => {
+				API.post('/api/request-reset-email/', {
+					email: usercredentials.email
+				})
+					// eslint-disable-next-line
+					.then(response => {
+						resolve(true);
+					})
+					.catch(error => {
+						console.log(error);
+						reject(error);
+					});
+			});
+		},
+
+		resetVerifyToken(context, usercredentials) {
+			const URL =
+				'/api/password-reset/' +
+				usercredentials.uidb64 +
+				'/' +
+				usercredentials.token;
+			//eslint-disable-next-line
+			return new Promise((resolve, reject) => {
+				API.get(URL)
+					.then(response => {
+						if (response.data.success == true) resolve(true);
+						else reject(new Error('Invalid Token!'));
+					})
+					.catch(err => {
+						reject(err);
+					});
+			});
+		},
+
+		resetSetNewPassword(context, usercredentials) {
+			// eslint-disable-next-line
+			return new Promise((resolve, reject) => {
+				API.patch('/api/password-reset-complete', {
+					password: usercredentials.password,
+					token: usercredentials.token,
+					uidb64: usercredentials.uidb64
+				})
+					// eslint-disable-next-line
+					.then(response => {
+						resolve(true);
+					})
+					.catch(error => {
+						console.log(error);
+						reject(error);
+					});
 			});
 		}
 	},

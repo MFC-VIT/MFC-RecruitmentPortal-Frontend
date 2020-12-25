@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import NProgress from 'nprogress';
+import store from '../store/index';
 
 Vue.use(VueRouter);
 
@@ -101,12 +102,48 @@ const routes = [
 		}
 	},
 	{
-		path: '/test/rules',
-		name: 'TestRules',
-		component: loadView('TestRules'),
+		path: '/test/techrules',
+		name: 'TechnicalRules',
+		component: loadView('TechnicalRules'),
 		meta: {
-			title: 'Start your Test | Rules | MFC Recruitment 2020',
-			authwall: false
+			title: 'Technical Test | Rules | MFC Recruitment 2020',
+			authwall: true
+		}
+	},
+	{
+		path: '/test/mgmtrules',
+		name: 'MgmtRules',
+		component: loadView('MgmtRules'),
+		meta: {
+			title: 'Management Test | Rules | MFC Recruitment 2020',
+			authwall: true
+		}
+	},
+	{
+		path: '/test/designrules',
+		name: 'DesignRules',
+		component: loadView('DesignRules'),
+		meta: {
+			title: 'Design Test | Rules | MFC Recruitment 2020',
+			authwall: true
+		}
+	},
+	{
+		path: '/test/editorialrules',
+		name: 'EditorialRules',
+		component: loadView('EditorialRules'),
+		meta: {
+			title: 'Editorial Test | Rules | MFC Recruitment 2020',
+			authwall: true
+		}
+	},
+	{
+		path: '/test/thanks',
+		name: 'TestThanks',
+		component: loadView('TestThanks'),
+		meta: {
+			title: 'Thank You for taking the Test | MFC Recruitment 2020',
+			authwall: true
 		}
 	},
 	{
@@ -114,15 +151,6 @@ const routes = [
 		name: 'Rules',
 		component: loadView('Rules'),
 		meta: { title: 'Rules | MFC Recruitment 2020', authwall: false }
-	},
-	{
-		path: '/user/result',
-		name: 'Result',
-		component: loadView('Result'),
-		meta: {
-			title: 'View your Result | MFC Recruitment 2020',
-			authwall: true
-		}
 	},
 	{
 		path: '/user/thanks',
@@ -137,7 +165,7 @@ const routes = [
 		path: '/test',
 		name: 'Test',
 		component: loadView('Test'),
-		meta: { title: 'Take Tests | MFC Recruitment 2020', authwall: false }
+		meta: { title: 'Take Tests | MFC Recruitment 2020', authwall: true }
 	},
 	{
 		path: '/contact',
@@ -221,11 +249,11 @@ router.beforeEach((to, from, next) => {
 		// this route requires auth, check if logged in
 		// if not, redirect to login page.
 		// Check if user is authenticated or not
-		if (localStorage.getItem('authenticated') == true) {
+		if (store.state.authenticated) {
 			next();
 		} else {
 			next({
-				path: '/login',
+				path: '/user/login',
 				query: { redirect: to.fullPath }
 			});
 		}

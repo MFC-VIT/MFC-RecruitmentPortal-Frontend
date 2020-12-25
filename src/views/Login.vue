@@ -28,7 +28,10 @@
               autocomplete="new-password"
               required
             ></b-form-input>
-            <div @click="resetPassword" class="text-moz-orange text-right mt-1">Forgot Password?</div>
+            <div
+              @click="resetPassword"
+              class="text-moz-orange text-right mt-1 site-login-fp"
+            >Forgot Password?</div>
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange">Login</b-button>
@@ -84,6 +87,9 @@ export default {
   top: -3%;
   width: 100%;
   left: 0%;
+}
+.site-login-fp {
+  cursor: pointer;
 }
 body {
   color: white;
