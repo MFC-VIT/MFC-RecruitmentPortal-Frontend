@@ -1,8 +1,9 @@
 <template>
   <b-container>
-    <b-row align-v="center" align-h="center">
-      <b-col cols="11" md="6" class="site-newpwd-main mt-md-5">
+    <b-row align-v="center" align-h="center" class="mt-md-5">
+      <b-col cols="11" md="5" class="site-newpwd-main mt-md-5">
         <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-newpwd-logo" />
+        <h3 class="text-white text-center site-newpwd-nishchay">Set q New Password!!!</h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-newpwd-form">
           <b-form-group
             id="input-group-4"
@@ -20,7 +21,9 @@
             ></b-form-input>
           </b-form-group>
           <br />
-          <b-button @click="onSubmit" block pill type="submit" variant="moz-orange">Reset Password</b-button>
+          <b-button @click="onSubmit" block pill type="submit" variant="moz-orange">
+            <strong class="site-newpwd-btn-text">Set New Password</strong>
+          </b-button>
         </b-form>
       </b-col>
     </b-row>
@@ -61,9 +64,18 @@ export default {
 }
 .site-newpwd-logo {
   position: relative;
-  top: -50px;
-  width: 20%;
-  left: 40%;
+  top: -60px;
+  width: 25%;
+  left: 37.5%;
+  background-color: #06192d;
+  border-radius: 60%;
+}
+.site-newpwd-btn-text {
+  font-size: 1.25rem;
+}
+.site-newpwd-nishchay {
+  position: relative;
+  top: -40px;
 }
 .site-newpwd-form {
   position: relative;
@@ -76,10 +88,11 @@ body {
 }
 input,
 input:focus {
-  background: black;
+  background: #06192d;
   color: white;
-  border: 2px solid #e66100;
-  border-radius: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+  height: 2.75rem;
 }
 .form-group,
 label {
