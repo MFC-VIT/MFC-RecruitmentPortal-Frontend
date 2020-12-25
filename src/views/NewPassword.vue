@@ -24,11 +24,6 @@
         </b-form>
       </b-col>
     </b-row>
-    <!-- <b-row v-if="!isTokenVerified">
-      <b-col>
-        <h2 class="text-center text-moz-orange">Invalid Token!</h2>
-      </b-col>
-    </b-row>-->
   </b-container>
 </template>
 
@@ -37,26 +32,9 @@ export default {
   data() {
     return {
       password: ""
-      // isTokenVerified: false
     };
   },
-  // beforeMount() {
-  //   this.initVerify();
-  // },
   methods: {
-    // initVerify() {
-    //   this.$store
-    //     .dispatch("resetVerifyToken", {
-    //       uidb64: this.$router.params.uid,
-    //       token: this.$router.params.token
-    //     })
-    //     .then(() => {
-    //       this.isTokenVerified = true;
-    //     })
-    //     .catch(err => {
-    //       alert(err);
-    //     });
-    // },
     onSubmit(event) {
       event.preventDefault();
       this.$store

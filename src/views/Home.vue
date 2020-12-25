@@ -1,6 +1,6 @@
 <template>
-  <b-container>
-    <b-row align-v="center">
+  <b-container fluid>
+    <b-row class="ml-md-5 mt-md-5" align-v="center">
       <b-col offset="3" cols="6" class="d-md-none">
         <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
       </b-col>
@@ -22,7 +22,9 @@
             variant="outline-light"
             class="m-2"
           >Sign Up</b-button>
-          <b-button size="lg" to="/user/login" squared variant="outline-light" class="m-2">Login</b-button>
+          <b-button size="lg" to="/user/login" squared variant="outline-light" class="m-2">
+            <div class="px-2">Login</div>
+          </b-button>
         </div>
       </b-col>
       <b-col class="d-none d-md-block" md="4">

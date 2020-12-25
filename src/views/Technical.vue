@@ -6,8 +6,8 @@
           <strong>Tech Domain</strong>
         </h3>
         <div v-for="item in this.questions.mcq" :key="item.question_id">
-          <b-img-lazy class="site-tech-img m-2" fluid-grow :src="item.question"></b-img-lazy>
-          <div class="text-moz-orange">
+          <b-img-lazy class="site-tech-img" fluid-grow :src="item.question"></b-img-lazy>
+          <div class="site-tech-mcqopt pl-5 text-moz-orange">
             <input type="radio" :name="item.question_id" id="option1" />
             <label :for="option1" class="p-2 h5">{{item.option_1}}</label>
             <br />
@@ -25,9 +25,10 @@
         </div>
         <div v-for="item in this.questions.write" :key="item.question_id">
           <b-img-lazy class="site-tech-img m-2" fluid-grow :src="item.question"></b-img-lazy>
-          <textarea class="site-tech-ta m-2" placeholder="Type your answer here!"></textarea>
+          <textarea rows="5" class="site-tech-ta m-2" placeholder="Type your answer here!"></textarea>
         </div>
-        <b-button @click="sendAnswers" class="m-2" block pill variant="moz-orange">Submit</b-button>
+        <br />
+        <b-button @click="sendAnswers" block pill variant="moz-orange">Submit</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -116,6 +117,10 @@ export default {
 <style>
 .site-tech-img {
   opacity: 0.8;
+}
+.site-tech-mcqopt {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
 }
 .site-tech-ta {
   border-radius: 10px;
