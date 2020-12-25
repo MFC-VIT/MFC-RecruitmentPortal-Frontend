@@ -11,9 +11,9 @@
           class="site-home-text-3"
         >is one of the largest developers' communities in VIT University aiding you to change your ideas into reality. It is a technical club dedicated to expand the technical know-how and productivity of all the future engineers and scientists. it is a common platform for intercollege Technical Activities. Under the precious guidance of the faculty members, this club is all set to and will create new horizons in the development of the college.</p>
         <br />
-        <!-- <p
+        <p
           class="site-home-text-4"
-        >Attempt the Test, if you think you have what it takes to be a part of us ;)</p>-->
+        >Attempt the Test, if you think you have what it takes to be a part of us ;)</p>
         <div class="d-flex d-inline-flex">
           <b-button
             size="lg"

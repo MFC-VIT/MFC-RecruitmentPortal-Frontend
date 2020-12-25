@@ -5,27 +5,37 @@
         <h3 class="text-center text-moz-orange mt-1 mt-md-3">
           <strong>Tech Domain</strong>
         </h3>
+        <br />
+        <center>
+          <BaseTimer @timer-finished="sendAnswers" />
+        </center>
+        <br />
+        <br />
         <div v-for="item in this.questions.mcq" :key="item.question_id">
           <b-img-lazy class="site-tech-img" fluid-grow :src="item.question"></b-img-lazy>
           <div class="site-tech-mcqopt pl-5 text-moz-orange">
-            <input type="radio" :name="item.question_id" id="option1" />
-            <label :for="option1" class="p-2 h5">{{item.option_1}}</label>
+            <input type="radio" v-model="item.question_id" value="item.option_1" />
+            <label class="p-2 h5">{{item.option_1}}</label>
             <br />
-            <input type="radio" :name="item.question_id" id="option2" />
-            <label :for="option2" class="p-2 h5">{{item.option_2}}</label>
+            <input type="radio" v-model="item.question_id" value="item.option_2" />
+            <label class="p-2 h5">{{item.option_2}}</label>
             <br />
-            <input type="radio" :name="item.question_id" id="option3" />
-            <label :for="option3" class="p-2 h5">{{item.option_3}}</label>
+            <input type="radio" v-model="item.question_id" value="item.option_3" />
+            <label class="p-2 h5">{{item.option_3}}</label>
             <br />
-            <input type="radio" :name="item.question_id" id="option4" />
-            <label :for="option4" class="p-2 h5">{{item.option_4}}</label>
-            <br />
+            <input type="radio" v-model="item.question_id" value="item.option_4" />
+            <label class="p-2 h5">{{item.option_4}}</label>
           </div>
           <br />
         </div>
         <div v-for="item in this.questions.write" :key="item.question_id">
           <b-img-lazy class="site-tech-img m-2" fluid-grow :src="item.question"></b-img-lazy>
-          <textarea rows="5" class="site-tech-ta m-2" placeholder="Type your answer here!"></textarea>
+          <textarea
+            rows="5"
+            class="site-tech-ta m-2 px-5 py-4"
+            :id="item.question_id"
+            placeholder="Type your answer here!"
+          ></textarea>
         </div>
         <br />
         <b-button @click="sendAnswers" block pill variant="moz-orange">Submit</b-button>
@@ -36,6 +46,7 @@
 
 <script>
 import axios from "axios";
+import BaseTimer from "../components/BaseTimer";
 export default {
   name: "Technical",
   data() {
@@ -43,6 +54,9 @@ export default {
       questions: [],
       answers: []
     };
+  },
+  components: {
+    BaseTimer
   },
   methods: {
     sleep(ms) {
@@ -59,22 +73,21 @@ export default {
           Authorization: "Bearer " + localStorage.getItem("accessToken")
         }
       });
-      console.log(this.questions);
-      this.questions.mcq.forEach(el => {
-        console.log(document.getElementsByName(el.question_id));
+      this.questions.mcq.forEach(item => {
         this.answers.push({
           domain: "1",
-          question: el.question,
-          answer: document.getElementsByName(el.question_id)[0].value
+          question: item.question,
+          answer: this.getValueOfRadio(item.question_id)
         });
       });
-      this.questions.write.forEach(el => {
+      this.questions.write.forEach(item => {
         this.answers.push({
           domain: "1",
-          question: el.question,
-          answer: document.getElementsByName(el.question_id)[0].value
+          question: item.question,
+          answer: document.getElementById(item.question_id).value
         });
       });
+      console.log(this.answers);
       // eslint-disable-next-line
       return new Promise((resolve, reject) => {
         getAPI
@@ -84,6 +97,12 @@ export default {
           )
           // eslint-disable-next-line
           .then(response => {});
+      });
+    },
+    getValueOfRadio(rad) {
+      var ele = document.getElementsByName(rad);
+      ele.forEach(element => {
+        if (element.checked) return element.value;
       });
     }
   },

@@ -168,12 +168,6 @@ const routes = [
 		meta: { title: 'Take Tests | MFC Recruitment 2020', authwall: true }
 	},
 	{
-		path: '/contact',
-		name: 'Contact',
-		component: loadView('Contact'),
-		meta: { title: 'Contact Us | MFC Recruitment 2020', authwall: false }
-	},
-	{
 		path: '/social/linkedin',
 		beforeEnter() {
 			location.href =

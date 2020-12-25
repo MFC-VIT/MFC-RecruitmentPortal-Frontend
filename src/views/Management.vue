@@ -5,14 +5,22 @@
         <h3 class="text-center text-moz-orange mt-1 mt-md-3">
           <strong>Management Domain</strong>
         </h3>
+        <br />
+        <center>
+          <BaseTimer @timer-finished="sendAnswers" />
+        </center>
+        <br />
+        <br />
         <div v-for="item in this.questions" :key="item.question_id">
           <b-img-lazy class="site-mgmt-img m-2" fluid-grow :src="item.question"></b-img-lazy>
           <textarea
             rows="5"
-            class="site-mgmt-ta m-2"
+            class="site-mgmt-ta m-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
           >Type your answer here!</textarea>
+          <br />
+          <br />
         </div>
         <b-button @click="sendAnswers" class="m-2" block pill variant="moz-orange">Submit</b-button>
       </b-col>
@@ -22,6 +30,7 @@
 
 <script>
 import axios from "axios";
+import BaseTimer from "../components/BaseTimer";
 export default {
   name: "Management",
   data() {
@@ -29,6 +38,9 @@ export default {
       questions: [],
       answers: []
     };
+  },
+  components: {
+    BaseTimer
   },
   methods: {
     sleep(ms) {
@@ -51,6 +63,9 @@ export default {
           question: item.question,
           answer: document.getElementById(item.question_id).value
         });
+      });
+      this.$store.dispatch("getManagement").catch(err => {
+        console.log(err);
       });
       // eslint-disable-next-line
       return new Promise((resolve, reject) => {
@@ -102,5 +117,6 @@ export default {
 .site-mgmt-ta {
   border-radius: 10px;
   width: 100%;
+  font-size: 1.25rem;
 }
 </style>

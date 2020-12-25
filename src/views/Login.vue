@@ -1,8 +1,9 @@
 <template>
   <b-container>
-    <b-row alogn-v="center" align-h="center">
-      <b-col cols="11" md="6" class="site-login-main mt-md-5">
+    <b-row alogn-v="center" align-h="center" class="mt-md-5">
+      <b-col cols="11" md="5" class="site-login-main mt-md-5">
         <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-login-logo" />
+        <h3 class="text-white text-center site-login-nishchay">Wishes you luck!!!</h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-login-form">
           <b-form-group
             id="input-group-1"
@@ -15,7 +16,6 @@
               v-model="email"
               type="email"
               pattern="[A-Za-z0-9.]+@vitstudent.ac.in|[A-Za-z0-9.]+@vit.ac.in"
-              placeholder="Enter VIT Email"
               required
             ></b-form-input>
           </b-form-group>
@@ -23,7 +23,6 @@
             <b-form-input
               id="input-4"
               v-model="password"
-              placeholder="Enter password"
               type="password"
               autocomplete="new-password"
               required
@@ -34,7 +33,9 @@
             >Forgot Password?</div>
           </b-form-group>
           <br />
-          <b-button block pill type="submit" variant="moz-orange">Login</b-button>
+          <b-button block pill type="submit" variant="moz-orange">
+            <strong class="site-login-btn-text">Login</strong>
+          </b-button>
         </b-form>
       </b-col>
     </b-row>
@@ -78,9 +79,18 @@ export default {
 }
 .site-login-logo {
   position: relative;
-  top: -50px;
-  width: 20%;
-  left: 40%;
+  top: -60px;
+  width: 25%;
+  left: 37.5%;
+  background-color: #06192d;
+  border-radius: 60%;
+}
+.site-login-btn-text {
+  font-size: 1.25rem;
+}
+.site-login-nishchay {
+  position: relative;
+  top: -40px;
 }
 .site-login-form {
   position: relative;
@@ -90,16 +100,21 @@ export default {
 }
 .site-login-fp {
   cursor: pointer;
+  position: relative;
+  top: -93px;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 body {
   color: white;
 }
 input,
 input:focus {
-  background: black;
+  background: #06192d;
   color: white;
-  border: 2px solid #e66100;
-  border-radius: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+  height: 2.75rem;
 }
 .form-group,
 label {
