@@ -181,6 +181,12 @@ export default {
     }
   },
   beforeMount() {
+    if (localStorage.getItem("Tech") == "true") {
+      alert(
+        "You have already attempted the Technical test! You can attempt it only once!"
+      );
+      this.$router.push("/test");
+    }
     var getAPI = axios.create({
       baseURL: "https://mfcrecruitment.herokuapp.com/",
       timeout: 3000,

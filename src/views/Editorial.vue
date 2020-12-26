@@ -103,6 +103,12 @@ export default {
     }
   },
   beforeMount() {
+    if (localStorage.getItem("Edi") == "true") {
+      alert(
+        "You have already attempted the Editorial test! You can attempt it only once!"
+      );
+      this.$router.push("/test");
+    }
     var getAPI = axios.create({
       baseURL: "https://mfcrecruitment.herokuapp.com/",
       timeout: 3000,

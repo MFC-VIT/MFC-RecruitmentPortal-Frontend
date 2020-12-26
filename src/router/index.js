@@ -199,39 +199,27 @@ const router = new VueRouter({
 });
 
 router.beforeResolve((to, from, next) => {
-	if (to.path) {
-		NProgress.start();
+	if (
+		(from.name == 'Technical' ||
+			from.name == 'Design' ||
+			from.name == 'Editorial' ||
+			from.name == 'Management') &&
+		to.name != 'TestThanks'
+	) {
+		alert(
+			'You are not allowed to go back while giving a test! If you go back, your test will auto-submit!'
+		);
+	} else {
+		if (to.path) {
+			NProgress.start();
+		}
+		next();
 	}
-	next();
 });
 
 router.afterEach(() => {
 	NProgress.done();
 });
-
-// router.beforeEach((to, from, next) => {
-// 	const nearestWithTitle = to.matched
-// 		.slice()
-// 		.reverse()
-// 		.find(r => r.meta && r.meta.title);
-// 	if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
-// 	if (to.matched.some(record => record.meta.authwall)) {
-// 		// this route requires auth, check if logged in
-// 		// if not, redirect to login page.
-// 		// Check if user is authenticated or not
-// 		// eslint-disable-next-line no-constant-condition
-// 		if (false) {
-// 			next();
-// 		} else {
-// 			next({
-// 				path: '/user/login',
-// 				query: { redirect: to.fullPath }
-// 			});
-// 		}
-// 	} else {
-// 		next();
-// 	}
-// });
 
 router.beforeEach((to, from, next) => {
 	const nearestWithTitle = to.matched
@@ -240,9 +228,6 @@ router.beforeEach((to, from, next) => {
 		.find(r => r.meta && r.meta.title);
 	if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
 	if (to.matched.some(record => record.meta.authwall)) {
-		// this route requires auth, check if logged in
-		// if not, redirect to login page.
-		// Check if user is authenticated or not
 		if (store.state.authenticated) {
 			next();
 		} else {

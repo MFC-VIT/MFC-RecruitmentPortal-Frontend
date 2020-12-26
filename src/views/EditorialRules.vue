@@ -14,7 +14,7 @@
             <h3>The test shall be autosubmitted as soon as the time alloted is completed.</h3>
           </li>
           <li class="p-1">
-            <h3>If you attempt to refresh the page your answers shall not be saved and you may get different questions.</h3>
+            <h3>If you attempt to refresh or go back, then your test shall be auto-submitted!</h3>
           </li>
           <li class="p-1">
             <h3>This test has a time limit of 20 minutes!</h3>
@@ -53,6 +53,14 @@ export default {
     },
     goNext() {
       this.$router.push({ name: "Editorial" });
+    }
+  },
+  beforeMount() {
+    if (localStorage.getItem("Edi") == "true") {
+      alert(
+        "You have already attempted the Editorial test! You can attempt it only once!"
+      );
+      this.$router.push("/test");
     }
   }
 };

@@ -85,6 +85,12 @@ export default {
     }
   },
   beforeMount() {
+    if (localStorage.getItem("Manage") == "true") {
+      alert(
+        "You have already attempted the Management test! You can attempt it only once!"
+      );
+      this.$router.push("/test");
+    }
     var getAPI = axios.create({
       baseURL: "https://mfcrecruitment.herokuapp.com/",
       timeout: 3000,

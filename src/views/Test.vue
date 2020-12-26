@@ -21,12 +21,10 @@
           <h3 class="text-center p-4 site-test-desg-heading">Design & Media</h3>
           <h5
             class="text-right px-3 site-test-desg-text"
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi officia, molestiae repellat eveniet eos voluptatem pariatur velit nam ratione consequuntur provident dignissimos?</h5>
+          >The purpose design is to promote and encourage interest in the field of graphic and media design to students. It serves to instigate and enrich the creativeness among the students of the club.</h5>
           <div class="d-flex justify-content-center align-content-center">
             <img src="../assets/img/design.png" alt class="site-test-desg" />
-            <h5
-              class="text-right px-3 site-test-desg-text"
-            >Itaque velit porro natus fugiat, architecto cupiditate aliquid.</h5>
+            <h5 class="text-right px-3 site-test-desg-text">Join in and learn to ideate and create!</h5>
           </div>
         </div>
       </b-col>
@@ -46,11 +44,9 @@
           <br />
           <h5
             class="text-left px-3 site-test-left-text"
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi officia, molestiae repellat eveniet eos voluptatem pariatur velit nam ratione consequuntur provident dignissimos?</h5>
+          >This domain provides exclusive exposure to students in order to unleash their creativity as well as develop intellectual writing capabilities so as to produce authentic content in authentic styles.</h5>
           <div class="d-flex justify-content-center align-content-center">
-            <h5
-              class="text-left px-3"
-            >Itaque velit porro natus fugiat, architecto cupiditate aliquid.</h5>
+            <h5 class="text-left px-3">Exercise your brain and tantalise the readers!</h5>
             <img src="../assets/img/editorial.png" alt class="site-test-edit" />
           </div>
         </div>
@@ -70,7 +66,7 @@
     position: relative;
     top: -60px;
     left: -110px;
-    max-width: 170px;
+    max-height: 170px;
   }
   .site-test-tech-heading {
     position: relative;
@@ -86,7 +82,7 @@
     position: relative;
     top: -50px;
     left: 70px;
-    max-width: 170px;
+    max-height: 170px;
   }
   .site-test-mgmt-heading {
     position: relative;
@@ -102,7 +98,7 @@
     position: relative;
     top: 30px;
     left: -50px;
-    max-width: 140px;
+    height: 140px;
   }
   .site-test-desg-heading {
     position: relative;
@@ -111,13 +107,13 @@
   }
   .site-test-desg-text {
     position: relative;
-    top: 25px;
+    top: 20px;
   }
   .site-test-edit {
     position: relative;
-    top: 40px;
+    top: 15px;
     left: 40px;
-    max-width: 140px;
+    height: 120px;
   }
   .site-test-edit-heading {
     position: relative;
