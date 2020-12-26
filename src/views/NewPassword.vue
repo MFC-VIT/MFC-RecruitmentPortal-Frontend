@@ -3,7 +3,7 @@
     <b-row align-v="center" align-h="center" class="mt-md-5">
       <b-col cols="11" md="5" class="site-newpwd-main mt-md-5">
         <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-newpwd-logo" />
-        <h3 class="text-white text-center site-newpwd-nishchay">Set q New Password!!!</h3>
+        <h3 class="text-white text-center site-newpwd-nishchay">Set a New Password!!!</h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-newpwd-form">
           <b-form-group
             id="input-group-4"

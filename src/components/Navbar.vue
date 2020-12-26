@@ -13,7 +13,7 @@
             href="https://teams.microsoft.com/l/channel/19%3a4492da6b902a44c08dd2045b66599151%40thread.tacv2/Recruitment%25202020?groupId=030d60ad-5dae-48de-a1a9-9f250eeafec9&tenantId=d4963ce2-af94-4122-95a9-644e8b01624d"
           >Join Outreach Team</b-nav-item>
           <!-- <b-nav-item class="p-2" to="/contact">Contact Us</b-nav-item> -->
-          <b-nav-item class="p-2" to="/rules">Rules</b-nav-item>
+          <!-- <b-nav-item class="p-2" to="/rules">Rules</b-nav-item> -->
           <b-nav-item class="p-2" to="/social/instagram">
             <i class="fab fa-instagram"></i>
           </b-nav-item>

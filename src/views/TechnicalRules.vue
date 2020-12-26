@@ -17,7 +17,7 @@
             <h3>If you attempt to refresh the page your answers shall not be saved and you may get different questions.</h3>
           </li>
           <li class="p-1">
-            <h3>This test has a time limit of XYZ minutes!</h3>
+            <h3>This test has a time limit of 20 minutes!</h3>
           </li>
         </ul>
         <br />

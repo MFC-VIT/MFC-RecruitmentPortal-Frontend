@@ -11,34 +11,82 @@
         </center>
         <br />
         <br />
-        <div v-for="item in this.questions.mcq" :key="item.question_id">
-          <b-img-lazy class="site-tech-img" fluid-grow :src="item.question"></b-img-lazy>
-          <div class="site-tech-mcqopt pl-5 text-moz-orange">
-            <input type="radio" v-model="item.question_id" value="item.option_1" />
+        <!-- <div v-for="item in this.questions.mcq" :key="item.question_id">
+          <b-img-lazy class="site-tech-img my-2" fluid-grow :src="item.question"></b-img-lazy>
+          <div class="site-tech-mcqopt pl-5 text-moz-orange my-2">
+            <input
+              type="radio"
+              :ref="item.question_id"
+              v-model="item.question_id"
+              :value="item.option_1"
+              checked
+            />
             <label class="p-2 h5">{{item.option_1}}</label>
             <br />
-            <input type="radio" v-model="item.question_id" value="item.option_2" />
+            <input
+              type="radio"
+              :ref="item.question_id"
+              v-model="item.question_id"
+              :value="item.option_2"
+            />
             <label class="p-2 h5">{{item.option_2}}</label>
             <br />
-            <input type="radio" v-model="item.question_id" value="item.option_3" />
+            <input
+              type="radio"
+              :ref="item.question_id"
+              v-model="item.question_id"
+              :value="item.option_3"
+            />
             <label class="p-2 h5">{{item.option_3}}</label>
             <br />
-            <input type="radio" v-model="item.question_id" value="item.option_4" />
+            <input
+              type="radio"
+              :ref="item.question_id"
+              v-model="item.question_id"
+              :value="item.option_4"
+            />
             <label class="p-2 h5">{{item.option_4}}</label>
           </div>
           <br />
+          <br />
+        </div>-->
+        <div v-for="item in this.questions.mcq" :key="item.question_id">
+          <b-img-lazy class="site-tech-img my-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-form-group
+            class="site-tech-mcqopt pl-4 text-moz-orange my-2"
+            v-slot="{ ariaDescribedby }"
+          >
+            <b-form-radio-group
+              v-model="item.question_id"
+              :aria-describedby="ariaDescribedby"
+              :name="item.question_id"
+            >
+              <b-form-radio :value="item.option_1">{{item.option_1}}</b-form-radio>
+              <br />
+              <b-form-radio :value="item.option_2">{{item.option_2}}</b-form-radio>
+              <br />
+              <b-form-radio :value="item.option_3">{{item.option_3}}</b-form-radio>
+              <br />
+              <b-form-radio :value="item.option_4">{{item.option_4}}</b-form-radio>
+              <b-form-radio class="d-none" value="NA">Not Answered</b-form-radio>
+            </b-form-radio-group>
+          </b-form-group>
+          <br />
+          <br />
         </div>
         <div v-for="item in this.questions.write" :key="item.question_id">
-          <b-img-lazy class="site-tech-img m-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-img-lazy class="site-tech-img my-2" fluid-grow :src="item.question"></b-img-lazy>
           <textarea
             rows="5"
-            class="site-tech-ta m-2 px-5 py-4"
+            class="site-tech-ta my-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
-          ></textarea>
+          >Type your answer here!</textarea>
+          <br />
+          <br />
         </div>
         <br />
-        <b-button @click="sendAnswers" block pill variant="moz-orange">Submit</b-button>
+        <b-button class="my-2" @click="sendAnswers" block pill variant="moz-orange">Submit</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -52,7 +100,29 @@ export default {
   data() {
     return {
       questions: [],
-      answers: []
+      answers: [],
+      tech_mcq_1: "NA",
+      tech_mcq_2: "NA",
+      tech_mcq_3: "NA",
+      tech_mcq_4: "NA",
+      tech_mcq_5: "NA",
+      tech_mcq_6: "NA",
+      tech_mcq_7: "NA",
+      tech_mcq_8: "NA",
+      tech_mcq_9: "NA",
+      tech_mcq_10: "NA",
+      tech_mcq_11: "NA",
+      tech_mcq_12: "NA",
+      tech_mcq_13: "NA",
+      tech_mcq_14: "NA",
+      tech_mcq_15: "NA",
+      tech_mcq_16: "NA",
+      tech_mcq_17: "NA",
+      tech_mcq_18: "NA",
+      tech_mcq_19: "NA",
+      tech_mcq_20: "NA",
+      tech_mcq_21: "NA",
+      tech_mcq_22: "NA"
     };
   },
   components: {
@@ -77,7 +147,7 @@ export default {
         this.answers.push({
           domain: "1",
           question: item.question,
-          answer: this.getValueOfRadio(item.question_id)
+          answer: item.question_id
         });
       });
       this.questions.write.forEach(item => {
@@ -87,7 +157,6 @@ export default {
           answer: document.getElementById(item.question_id).value
         });
       });
-      console.log(this.answers);
       // eslint-disable-next-line
       return new Promise((resolve, reject) => {
         getAPI
@@ -96,7 +165,12 @@ export default {
             this.answers
           )
           // eslint-disable-next-line
-          .then(response => {});
+          .then(response => {
+            this.$router.push({ name: "TestThanks" });
+          })
+          .catch(error => {
+            alert(error);
+          });
       });
     },
     getValueOfRadio(rad) {
@@ -122,7 +196,6 @@ export default {
         .get("https://mfcrecruitment.herokuapp.com/api/technicalquestions/")
         .then(response => {
           this.questions = response.data;
-          console.log(this.questions);
           resolve(true);
         })
         .catch(error => {
