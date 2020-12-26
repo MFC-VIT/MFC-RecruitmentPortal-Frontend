@@ -10,15 +10,17 @@
         <div class="site-test-card m-4" @click="takeTech">
           <div class="d-flex justify-content-center align-content-center">
             <img src="../assets/img/technical.png" alt class="site-test-tech" />
-            <h2 class="text-center text-md-right p-4 site-test-tech-heading">Technical</h2>
+            <h1 class="text-center text-md-right p-4 site-test-tech-heading">Technical</h1>
           </div>
+          <br />
+          <br />
           <h5
             class="text-justify px-3 pb-4 site-test-tech-text"
           >This domain is for students who are engrossed with discovering, exploring and learning more about technology. It is the "functioning-organ" of our club thereby justifying its type.</h5>
         </div>
         <br />
         <div class="site-test-card m-4" @click="takeDesign">
-          <h3 class="text-center p-4 site-test-desg-heading">Design & Media</h3>
+          <h1 class="text-center p-4 site-test-desg-heading">Design & Media</h1>
           <h5
             class="text-right px-3 site-test-desg-text"
           >The purpose design is to promote and encourage interest in the field of graphic and media design to students. It serves to instigate and enrich the creativeness among the students of the club.</h5>
@@ -31,7 +33,7 @@
       <b-col md="5">
         <div class="site-test-card m-4" @click="takeMgmt">
           <div class="d-flex justify-content-center align-content-center">
-            <h2 class="text-center text-md-right p-4 site-test-mgmt-heading">Management</h2>
+            <h1 class="text-center text-md-right p-4 site-test-mgmt-heading">Management</h1>
             <img src="../assets/img/management.png" alt class="site-test-mgmt" />
           </div>
           <h5
@@ -40,7 +42,7 @@
         </div>
         <br />
         <div class="site-test-card m-4" @click="takeEditorial">
-          <h3 class="text-center p-4 site-test-edit-heading">Editorial</h3>
+          <h1 class="text-center p-4 site-test-edit-heading">Editorial</h1>
           <br />
           <h5
             class="text-left px-3 site-test-left-text"
@@ -64,7 +66,7 @@
 @media screen and (min-width: 769px) {
   .site-test-tech {
     position: relative;
-    top: -60px;
+    top: -40px;
     left: -110px;
     max-height: 170px;
   }
