@@ -75,7 +75,12 @@ export default new Vuex.Store({
 						resolve(true);
 					})
 					.catch(error => {
-						reject(error);
+						if (error.response.status === 401) {
+							reject(
+							  new Error('Invalid Email or Password!! Try Again.'),
+							  null
+							);
+						  } else reject(error.response.data.message);
 					});
 			});
 		},
