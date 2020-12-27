@@ -33,7 +33,14 @@
           <br />
           <br />
         </div>
-        <b-button @click="sendAnswers" class="m-2" block pill variant="moz-orange">Submit</b-button>
+        <b-button
+          :disabled="isSubmitted"
+          @click="sendAnswers"
+          class="m-2"
+          block
+          pill
+          variant="moz-orange"
+        >Submit</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -47,7 +54,8 @@ export default {
   data() {
     return {
       questions: [],
-      answers: []
+      answers: [],
+      isSubmitted: false
     };
   },
   components: {
@@ -60,6 +68,7 @@ export default {
       });
     },
     async sendAnswers() {
+      this.isSubmitted = true;
       // eslint-disable-next-line
       var getAPI = axios.create({
         baseURL: "https://mfcrecruitment.herokuapp.com/",

@@ -86,7 +86,14 @@
           <br />
         </div>
         <br />
-        <b-button class="my-2" @click="sendAnswers" block pill variant="moz-orange">Submit</b-button>
+        <b-button
+          :disabled="isSubmitted"
+          class="my-2"
+          @click="sendAnswers"
+          block
+          pill
+          variant="moz-orange"
+        >Submit</b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -122,7 +129,8 @@ export default {
       tech_mcq_19: "NA",
       tech_mcq_20: "NA",
       tech_mcq_21: "NA",
-      tech_mcq_22: "NA"
+      tech_mcq_22: "NA",
+      isSubmitted: false
     };
   },
   components: {
@@ -135,6 +143,7 @@ export default {
       });
     },
     async sendAnswers() {
+      this.isSubmitted = true;
       // eslint-disable-next-line
       var getAPI = axios.create({
         baseURL: "https://mfcrecruitment.herokuapp.com/",
