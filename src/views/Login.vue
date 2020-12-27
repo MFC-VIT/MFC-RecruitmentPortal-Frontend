@@ -52,21 +52,21 @@ export default {
   },
   methods: {
     onSubmit(event) {
-      // event.preventDefault();
-      // this.$store
-      //   .dispatch("userLogin", {
-      //     email: this.email,
-      //     password: this.password
-      //   })
-      //   .then(() => {
-      //     this.$router.push({ name: "Test" });
-      //   })
-      //   .catch(err => {
-      //     alert(err);
-      //   });
-      alert(
-        "Login is disabled now! Timing are from 10AM-10PM! Please check back in within time!"
-      );
+      event.preventDefault();
+      this.$store
+        .dispatch("userLogin", {
+          email: this.email,
+          password: this.password
+        })
+        .then(() => {
+          this.$router.push({ name: "Test" });
+        })
+        .catch(err => {
+          alert(err);
+        });
+      // alert(
+      //   "Login is disabled now! Timing are from 10AM-10PM! Please check back in within time!"
+      // );
     },
     resetPassword() {
       this.$router.push({ name: "Reset" });

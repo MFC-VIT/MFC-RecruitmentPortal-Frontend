@@ -36,7 +36,8 @@ export default {
   data() {
     return {
       questions: [],
-      answers: []
+      answers: [],
+      isSubmitted: false
     };
   },
   components: {
@@ -49,6 +50,7 @@ export default {
       });
     },
     async sendAnswers() {
+      isSubmitted = true;
       // eslint-disable-next-line
       var getAPI = axios.create({
         baseURL: "https://mfcrecruitment.herokuapp.com/",
