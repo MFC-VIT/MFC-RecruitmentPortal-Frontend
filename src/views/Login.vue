@@ -51,6 +51,7 @@ export default {
     };
   },
   methods: {
+    // eslint-disable-next-line no-unused-vars
     onSubmit(event) {
       // event.preventDefault();
       // this.$store
