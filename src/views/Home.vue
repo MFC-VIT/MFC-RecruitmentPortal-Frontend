@@ -14,7 +14,7 @@
         <p
           class="site-home-text-4"
         >Attempt the Test, if you think you have what it takes to be a part of us ;)</p>
-        <div class="d-flex d-inline-flex">
+        <!-- <div class="d-flex d-inline-flex">
           <b-button
             size="lg"
             to="/user/register"
@@ -25,7 +25,7 @@
           <b-button size="lg" to="/user/login" squared variant="outline-light" class="m-2">
             <div class="px-2">Login</div>
           </b-button>
-        </div>
+        </div>-->
       </b-col>
       <b-col class="d-none d-md-block" md="4">
         <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
