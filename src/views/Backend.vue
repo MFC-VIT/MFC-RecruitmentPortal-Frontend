@@ -6,9 +6,6 @@
           <strong>Backend Domain</strong>
         </h3>
         <br />
-        <center>
-          <BaseTimer @timer-finished="sendAnswers" />
-        </center>
         <br />
         <br />
         <!-- <div v-for="item in this.questions.mcq" :key="item.question_id">
@@ -122,7 +119,6 @@ Type your answer here!</textarea
 
 <script>
 import axios from "axios";
-import BaseTimer from "../components/BaseTimer";
 export default {
   name: "Backend",
   data() {
@@ -153,9 +149,6 @@ export default {
       tech_mcq_22: "NA",
       isSubmitted: false
     };
-  },
-  components: {
-    BaseTimer
   },
   methods: {
     sleep(ms) {
