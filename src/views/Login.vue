@@ -2,8 +2,14 @@
   <b-container>
     <b-row alogn-v="center" align-h="center" class="mt-md-5">
       <b-col cols="11" md="5" class="site-login-main mt-md-5">
-        <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-login-logo" />
-        <h3 class="text-white text-center site-login-nishchay">Wishes you luck!!!</h3>
+        <img
+          src="./../assets/img/logo.png"
+          alt="MFC Logo"
+          class="site-login-logo"
+        />
+        <h3 class="text-white text-center site-login-nishchay">
+          Wishes you luck!!!
+        </h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-login-form">
           <b-form-group
             id="input-group-1"
@@ -19,7 +25,12 @@
               required
             ></b-form-input>
           </b-form-group>
-          <b-form-group id="input-group-4" label="Password:" label-size="lg" label-for="input-4">
+          <b-form-group
+            id="input-group-4"
+            label="Password:"
+            label-size="lg"
+            label-for="input-4"
+          >
             <b-form-input
               id="input-4"
               v-model="password"
@@ -30,7 +41,9 @@
             <div
               @click="resetPassword"
               class="text-moz-orange text-right mt-1 site-login-fp"
-            >Forgot Password?</div>
+            >
+              Forgot Password?
+            </div>
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange">

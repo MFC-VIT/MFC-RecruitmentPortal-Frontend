@@ -11,10 +11,16 @@
             <h3>You can only attempt the test for a domain only once.</h3>
           </li>
           <li class="p-1">
-            <h3>The test shall be autosubmitted as soon as the time alloted is completed.</h3>
+            <h3>
+              The test shall be autosubmitted as soon as the time alloted is
+              completed.
+            </h3>
           </li>
           <li class="p-1">
-            <h3>If you attempt to refresh the page your answers shall not be saved and you may get different questions.</h3>
+            <h3>
+              If you attempt to refresh the page your answers shall not be saved
+              and you may get different questions.
+            </h3>
           </li>
         </ul>
       </b-col>

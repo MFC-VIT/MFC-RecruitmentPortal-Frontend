@@ -3,7 +3,7 @@
     <b-row align-h="center" align-v="center">
       <b-col cols="10">
         <h3 class="text-center text-moz-orange mt-1 mt-md-3">
-          <strong>Editorial Domain</strong>
+          <strong>App Domain</strong>
         </h3>
         <br />
         <center>
@@ -12,24 +12,36 @@
         <br />
         <br />
         <div v-for="item in this.questions.short" :key="item.question_id">
-          <b-img-lazy class="site-edit-img m-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-img-lazy
+            class="site-app-img m-2"
+            fluid-grow
+            :src="item.question"
+          ></b-img-lazy>
           <textarea
             rows="5"
-            class="site-edit-ta m-2 px-5 py-4"
+            class="site-app-ta m-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
-          >Type your answer here!</textarea>
+          >
+Type your answer here!</textarea
+          >
           <br />
           <br />
         </div>
         <div v-for="item in this.questions.long" :key="item.question_id">
-          <b-img-lazy class="site-edit-img m-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-img-lazy
+            class="site-app-img m-2"
+            fluid-grow
+            :src="item.question"
+          ></b-img-lazy>
           <textarea
             rows="5"
-            class="site-edit-ta m-2 px-5"
+            class="site-app-ta m-2 px-5"
             :id="item.question_id"
             placeholder="Type your answer here!"
-          >Type your answer here!</textarea>
+          >
+Type your answer here!</textarea
+          >
           <br />
           <br />
         </div>
@@ -40,7 +52,8 @@
           block
           pill
           variant="moz-orange"
-        >Submit</b-button>
+          >Submit</b-button
+        >
       </b-col>
     </b-row>
   </b-container>
@@ -50,7 +63,7 @@
 import axios from "axios";
 import BaseTimer from "../components/BaseTimer";
 export default {
-  name: "Editorial",
+  name: "AppD",
   data() {
     return {
       questions: [],
@@ -91,14 +104,14 @@ export default {
           answer: document.getElementById(item.question_id).value
         });
       });
-      this.$store.dispatch("getEditorial").catch(err => {
+      this.$store.dispatch("getApp").catch(err => {
         console.log(err);
       });
       // eslint-disable-next-line
       return new Promise((resolve, reject) => {
         getAPI
           .post(
-            "https://mfcrecruitment.herokuapp.com/api/send_edit_responses/",
+            "https://mfcrecruitment.herokuapp.com/api/send_app_responses/",
             this.answers
           )
           // eslint-disable-next-line
@@ -112,9 +125,9 @@ export default {
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Edi") == "true") {
+    if (localStorage.getItem("App") == "true") {
       alert(
-        "You have already attempted the Editorial test! You can attempt it only once!"
+        "You have already attempted the App test! You can attempt it only once!"
       );
       this.$router.push("/test");
     }
@@ -125,12 +138,12 @@ export default {
         Authorization: "Bearer " + localStorage.getItem("accessToken")
       }
     });
-    this.$store.dispatch("getEditorial").catch(err => {
+    this.$store.dispatch("getApp").catch(err => {
       console.log(err);
     });
     return new Promise((resolve, reject) => {
       getAPI
-        .get("https://mfcrecruitment.herokuapp.com/api/editorialquestions/")
+        .get("https://mfcrecruitment.herokuapp.com/api/appquestions/")
         .then(response => {
           this.questions = response.data.write;
           resolve(true);
@@ -144,10 +157,10 @@ export default {
 </script>
 
 <style>
-.site-edit-img {
+.site-app-img {
   opacity: 0.8;
 }
-.site-edit-ta {
+.site-app-ta {
   border-radius: 10px;
   width: 100%;
   font-size: 1.25rem;

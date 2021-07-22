@@ -11,10 +11,16 @@
             <h3>You can only attempt the test for a domain only once.</h3>
           </li>
           <li class="p-1">
-            <h3>The test shall be autosubmitted as soon as the time alloted is completed.</h3>
+            <h3>
+              The test shall be autosubmitted as soon as the time alloted is
+              completed.
+            </h3>
           </li>
           <li class="p-1">
-            <h3>If you attempt to refresh or go back, then your test shall be auto-submitted!</h3>
+            <h3>
+              If you attempt to refresh or go back, then your test shall be
+              auto-submitted!
+            </h3>
           </li>
           <li class="p-1">
             <h3>This test has a time limit of 20 minutes!</h3>
@@ -22,10 +28,19 @@
         </ul>
         <br />
         <div>
-          <b-button @click="goNext" variant="moz-orange" style="float: left" class="px-2">
+          <b-button
+            @click="goNext"
+            variant="moz-orange"
+            style="float: left"
+            class="px-2"
+          >
             <div class="px-3">Accept</div>
           </b-button>
-          <b-button @click="goBack" variant="outline-moz-orange" style="float: right">
+          <b-button
+            @click="goBack"
+            variant="outline-moz-orange"
+            style="float: right"
+          >
             <div class="px-3">Decline</div>
           </b-button>
         </div>
@@ -46,19 +61,19 @@ li {
 
 <script>
 export default {
-  name: "EditorialRules",
+  name: "AppRules",
   methods: {
     goBack() {
       this.$router.push({ name: "Test" });
     },
     goNext() {
-      this.$router.push({ name: "Editorial" });
+      this.$router.push({ name: "App" });
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Edi") == "true") {
+    if (localStorage.getItem("App") == "true") {
       alert(
-        "You have already attempted the Editorial test! You can attempt it only once!"
+        "You have already attempted the App test! You can attempt it only once!"
       );
       this.$router.push("/test");
     }

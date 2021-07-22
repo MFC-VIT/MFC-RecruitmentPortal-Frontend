@@ -1,17 +1,26 @@
 <template>
   <b-container fluid>
-    <b-navbar class="ml-md-5" size="lg" toggleable="lg" type="dark" variant="moz-transparent">
+    <b-navbar
+      class="ml-md-5"
+      size="lg"
+      toggleable="lg"
+      type="dark"
+      variant="moz-transparent"
+    >
       <b-navbar-brand class="d-none d-md-block" to="/">
         <div class="site-nav-brand">MFC-VIT</div>
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto h3">
-          <b-nav-item class="p-2" href="https://mfcvit.in/">Our Website</b-nav-item>
+          <b-nav-item class="p-2" href="https://mfcvit.in/"
+            >Our Website</b-nav-item
+          >
           <b-nav-item
             class="p-2"
             href="https://teams.microsoft.com/l/channel/19%3a4492da6b902a44c08dd2045b66599151%40thread.tacv2/Recruitment%25202020?groupId=030d60ad-5dae-48de-a1a9-9f250eeafec9&tenantId=d4963ce2-af94-4122-95a9-644e8b01624d"
-          >Join Outreach Team</b-nav-item>
+            >Join Outreach Team</b-nav-item
+          >
           <!-- <b-nav-item class="p-2" to="/contact">Contact Us</b-nav-item> -->
           <!-- <b-nav-item class="p-2" to="/rules">Rules</b-nav-item> -->
           <b-nav-item class="p-2" to="/social/instagram">

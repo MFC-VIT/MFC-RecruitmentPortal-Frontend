@@ -2,8 +2,14 @@
   <b-container>
     <b-row alogn-v="center" align-h="center" class="mt-md-5">
       <b-col cols="11" md="5" class="site-reset-main mt-md-5">
-        <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-reset-logo" />
-        <h3 class="text-white text-center site-reset-nishchay">Reset your Password!!!</h3>
+        <img
+          src="./../assets/img/logo.png"
+          alt="MFC Logo"
+          class="site-reset-logo"
+        />
+        <h3 class="text-white text-center site-reset-nishchay">
+          Reset your Password!!!
+        </h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-reset-form">
           <b-form-group
             id="input-group-1"

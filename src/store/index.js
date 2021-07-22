@@ -23,7 +23,7 @@ export default new Vuex.Store({
     Tech: null,
     Manage: null,
     Design: null,
-    Edi: null
+    App: null
   },
   mutations: {
     setAuthentication(state) {
@@ -33,7 +33,7 @@ export default new Vuex.Store({
       state.Tech = response.data.technical;
       state.Manage = response.data.management;
       state.Design = response.data.design;
-      state.Edi = response.data.editorial;
+      state.App = response.data.app;
     }
   },
   actions: {
@@ -152,7 +152,7 @@ export default new Vuex.Store({
         .then(response => {
           localStorage.setItem("Tech", response.data.technical),
             localStorage.setItem("Manage", response.data.management),
-            localStorage.setItem("Edi", response.data.editorial),
+            localStorage.setItem("App", response.data.app),
             localStorage.setItem("Design", response.data.design);
         });
     },
@@ -184,7 +184,7 @@ export default new Vuex.Store({
       });
     },
 
-    async getEditorial({ dispatch }) {
+    async getApp({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {

@@ -7,7 +7,9 @@
       <b-col md="8">
         <h1 class="site-tt-text-1">You are finished with the test!!!</h1>
         <br />
-        <h3 class="site-tt-text-2">Stay Tuned to our Social Media for the results!</h3>
+        <h3 class="site-tt-text-2">
+          Stay Tuned to our Social Media for the results!
+        </h3>
         <br />
         <br />
         <br />
@@ -15,9 +17,18 @@
           <b-button to="/test" squared variant="outline-moz-orange">
             <strong>Attempt Other Domains</strong>
           </b-button>
-          <i class="fab fa-2x fa-instagram p-2 pointer-cursor" @click="gotoInstagram"></i>
-          <i class="fab fa-2x fa-facebook-f p-2 pointer-cursor" @click="gotoFacebook"></i>
-          <i class="fab fa-2x fa-linkedin-in p-2 pointer-cursor" @click="gotoLinkedIn"></i>
+          <i
+            class="fab fa-2x fa-instagram p-2 pointer-cursor"
+            @click="gotoInstagram"
+          ></i>
+          <i
+            class="fab fa-2x fa-facebook-f p-2 pointer-cursor"
+            @click="gotoFacebook"
+          ></i>
+          <i
+            class="fab fa-2x fa-linkedin-in p-2 pointer-cursor"
+            @click="gotoLinkedIn"
+          ></i>
         </div>
       </b-col>
       <b-col class="d-none d-md-block" md="4">

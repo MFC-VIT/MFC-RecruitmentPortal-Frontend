@@ -12,13 +12,19 @@
         <br />
         <br />
         <div v-for="item in this.questions" :key="item.question_id">
-          <b-img-lazy class="site-mgmt-img m-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-img-lazy
+            class="site-mgmt-img m-2"
+            fluid-grow
+            :src="item.question"
+          ></b-img-lazy>
           <textarea
             rows="5"
             class="site-mgmt-ta m-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
-          >Type your answer here!</textarea>
+          >
+Type your answer here!</textarea
+          >
           <br />
           <br />
         </div>
@@ -29,7 +35,8 @@
           block
           pill
           variant="moz-orange"
-        >Submit</b-button>
+          >Submit</b-button
+        >
       </b-col>
     </b-row>
   </b-container>

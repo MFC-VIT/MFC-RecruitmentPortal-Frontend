@@ -2,8 +2,14 @@
   <b-container>
     <b-row alogn-v="center" align-h="center" class="mt-md-5">
       <b-col cols="11" md="5" class="site-register-main mt-md-5">
-        <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-register-logo" />
-        <h3 class="text-white text-center site-register-nishchay">Wishes you luck!!!</h3>
+        <img
+          src="./../assets/img/logo.png"
+          alt="MFC Logo"
+          class="site-register-logo"
+        />
+        <h3 class="text-white text-center site-register-nishchay">
+          Wishes you luck!!!
+        </h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-register-form">
           <b-form-group
             id="input-group-1"
@@ -19,8 +25,17 @@
               required
             ></b-form-input>
           </b-form-group>
-          <b-form-group id="input-group-2" label="Name:" label-size="lg" label-for="input-2">
-            <b-form-input id="input-2" v-model="username" required></b-form-input>
+          <b-form-group
+            id="input-group-2"
+            label="Name:"
+            label-size="lg"
+            label-for="input-2"
+          >
+            <b-form-input
+              id="input-2"
+              v-model="username"
+              required
+            ></b-form-input>
           </b-form-group>
           <b-form-group
             id="input-group-3"
@@ -37,7 +52,12 @@
               required
             ></b-form-input>
           </b-form-group>
-          <b-form-group id="input-group-4" label="Password:" label-size="lg" label-for="input-4">
+          <b-form-group
+            id="input-group-4"
+            label="Password:"
+            label-size="lg"
+            label-for="input-4"
+          >
             <b-form-input
               id="input-4"
               v-model="password"
@@ -52,14 +72,21 @@
             label-size="lg"
             label-for="input-5"
           >
-            <b-form-input id="input-5" v-model="phone" autocomplete="tel" required></b-form-input>
+            <b-form-input
+              id="input-5"
+              v-model="phone"
+              autocomplete="tel"
+              required
+            ></b-form-input>
           </b-form-group>
           <br />
           <b-button block pill type="submit" variant="moz-orange">
             <strong class="site-login-btn-text">Register</strong>
           </b-button>
           <b-button v-on:click="verify" block pill variant="moz-orange">
-            <strong class="site-login-btn-text">Already Registered? Verify Email here!</strong>
+            <strong class="site-login-btn-text"
+              >Already Registered? Verify Email here!</strong
+            >
           </b-button>
           <b-button
             href="https://teams.microsoft.com/l/channel/19%3a4492da6b902a44c08dd2045b66599151%40thread.tacv2/Recruitment%25202020?groupId=030d60ad-5dae-48de-a1a9-9f250eeafec9&tenantId=d4963ce2-af94-4122-95a9-644e8b01624d"

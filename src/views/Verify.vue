@@ -2,8 +2,14 @@
   <b-container>
     <b-row alogn-v="center" align-h="center" class="mt-md-5">
       <b-col cols="11" md="5" class="site-verify-main mt-md-5">
-        <img src="./../assets/img/logo.png" alt="MFC Logo" class="site-verify-logo" />
-        <h3 class="text-white text-center site-verify-nishchay">Verify your email!!!</h3>
+        <img
+          src="./../assets/img/logo.png"
+          alt="MFC Logo"
+          class="site-verify-logo"
+        />
+        <h3 class="text-white text-center site-verify-nishchay">
+          Verify your email!!!
+        </h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-verify-form">
           <b-form-group
             id="input-group-1"
@@ -19,8 +25,18 @@
               required
             ></b-form-input>
           </b-form-group>
-          <b-form-group id="input-group-2" label="OTP:" label-size="lg" label-for="input-2">
-            <b-form-input id="input-2" v-model="otp" pattern="[0-9]{6}" required></b-form-input>
+          <b-form-group
+            id="input-group-2"
+            label="OTP:"
+            label-size="lg"
+            label-for="input-2"
+          >
+            <b-form-input
+              id="input-2"
+              v-model="otp"
+              pattern="[0-9]{6}"
+              required
+            ></b-form-input>
           </b-form-group>
 
           <br />

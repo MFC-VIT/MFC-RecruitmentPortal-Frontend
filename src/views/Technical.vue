@@ -51,7 +51,11 @@
           <br />
         </div>-->
         <div v-for="item in this.questions.mcq" :key="item.question_id">
-          <b-img-lazy class="site-tech-img my-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-img-lazy
+            class="site-tech-img my-2"
+            fluid-grow
+            :src="item.question"
+          ></b-img-lazy>
           <b-form-group
             class="site-tech-mcqopt pl-4 text-moz-orange my-2"
             v-slot="{ ariaDescribedby }"
@@ -61,27 +65,43 @@
               :aria-describedby="ariaDescribedby"
               :name="item.question_id"
             >
-              <b-form-radio :value="item.option_1">{{item.option_1}}</b-form-radio>
+              <b-form-radio :value="item.option_1">{{
+                item.option_1
+              }}</b-form-radio>
               <br />
-              <b-form-radio :value="item.option_2">{{item.option_2}}</b-form-radio>
+              <b-form-radio :value="item.option_2">{{
+                item.option_2
+              }}</b-form-radio>
               <br />
-              <b-form-radio :value="item.option_3">{{item.option_3}}</b-form-radio>
+              <b-form-radio :value="item.option_3">{{
+                item.option_3
+              }}</b-form-radio>
               <br />
-              <b-form-radio :value="item.option_4">{{item.option_4}}</b-form-radio>
-              <b-form-radio class="d-none" value="NA">Not Answered</b-form-radio>
+              <b-form-radio :value="item.option_4">{{
+                item.option_4
+              }}</b-form-radio>
+              <b-form-radio class="d-none" value="NA"
+                >Not Answered</b-form-radio
+              >
             </b-form-radio-group>
           </b-form-group>
           <br />
           <br />
         </div>
         <div v-for="item in this.questions.write" :key="item.question_id">
-          <b-img-lazy class="site-tech-img my-2" fluid-grow :src="item.question"></b-img-lazy>
+          <b-img-lazy
+            class="site-tech-img my-2"
+            fluid-grow
+            :src="item.question"
+          ></b-img-lazy>
           <textarea
             rows="5"
             class="site-tech-ta my-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
-          >Type your answer here!</textarea>
+          >
+Type your answer here!</textarea
+          >
           <br />
           <br />
         </div>
@@ -93,7 +113,8 @@
           block
           pill
           variant="moz-orange"
-        >Submit</b-button>
+          >Submit</b-button
+        >
       </b-col>
     </b-row>
   </b-container>

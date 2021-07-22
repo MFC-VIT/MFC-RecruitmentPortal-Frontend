@@ -7,13 +7,20 @@
       <b-col cols="12" md="8">
         <h1 class="site-home-text-1">Mozilla</h1>
         <h1 class="site-home-text-2">Firefox Club-VIT</h1>
-        <p
-          class="site-home-text-3"
-        >is one of the largest developers' communities in VIT University aiding you to change your ideas into reality. It is a technical club dedicated to expand the technical know-how and productivity of all the future engineers and scientists. it is a common platform for intercollege Technical Activities. Under the precious guidance of the faculty members, this club is all set to and will create new horizons in the development of the college.</p>
+        <p class="site-home-text-3">
+          is one of the largest developers' communities in VIT University aiding
+          you to change your ideas into reality. It is a technical club
+          dedicated to expand the technical know-how and productivity of all the
+          future engineers and scientists. it is a common platform for
+          intercollege Technical Activities. Under the precious guidance of the
+          faculty members, this club is all set to and will create new horizons
+          in the development of the college.
+        </p>
         <br />
-        <p
-          class="site-home-text-4"
-        >Attempt the Test, if you think you have what it takes to be a part of us ;)</p>
+        <p class="site-home-text-4">
+          Attempt the Test, if you think you have what it takes to be a part of
+          us ;)
+        </p>
         <div class="d-flex d-inline-flex">
           <b-button
             size="lg"
@@ -21,8 +28,15 @@
             squared
             variant="outline-light"
             class="m-2"
-          >Sign Up</b-button>
-          <b-button size="lg" to="/user/login" squared variant="outline-light" class="m-2">
+            >Sign Up</b-button
+          >
+          <b-button
+            size="lg"
+            to="/user/login"
+            squared
+            variant="outline-light"
+            class="m-2"
+          >
             <div class="px-2">Login</div>
           </b-button>
         </div>
