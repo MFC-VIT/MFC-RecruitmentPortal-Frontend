@@ -69,14 +69,6 @@ export default {
     goNext() {
       this.$router.push({ name: "Backend" });
     }
-  },
-  beforeMount() {
-    if (localStorage.getItem("Backend") == "true") {
-      alert(
-        "You have already attempted the Backend test! You can attempt it only once!"
-      );
-      this.$router.push("/test");
-    }
   }
 };
 </script>

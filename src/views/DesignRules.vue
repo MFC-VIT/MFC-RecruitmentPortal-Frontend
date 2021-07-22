@@ -69,14 +69,6 @@ export default {
     goNext() {
       this.$router.push({ name: "Design" });
     }
-  },
-  beforeMount() {
-    if (localStorage.getItem("Design") == "true") {
-      alert(
-        "You have already attempted the Design & Media test! You can attempt it only once!"
-      );
-      this.$router.push("/test");
-    }
   }
 };
 </script>

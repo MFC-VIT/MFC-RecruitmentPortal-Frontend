@@ -69,14 +69,6 @@ export default {
     goNext() {
       this.$router.push({ name: "App" });
     }
-  },
-  beforeMount() {
-    if (localStorage.getItem("App") == "true") {
-      alert(
-        "You have already attempted the App test! You can attempt it only once!"
-      );
-      this.$router.push("/test");
-    }
   }
 };
 </script>
