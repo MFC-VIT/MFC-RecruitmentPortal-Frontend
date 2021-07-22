@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from "axios";
 
 // const getAPI = axios.create({
 //     baseURL: 'https://mfcrecruitment.herokuapp.com/',
@@ -9,8 +9,8 @@ import axios from 'axios'
 // })
 
 const API = axios.create({
-    baseURL: 'https://mfcrecruitment.herokuapp.com/',
-    timeout: 5000
-})
+  baseURL: "https://mfcrecruitment.herokuapp.com/",
+  timeout: 5000
+});
 
-export {API}
+export { API };
