@@ -7,16 +7,20 @@
     </center>
     <b-row class="text-white" align-h="center">
       <b-col md="5">
-        <div class="site-test-card m-4" @click="takeTech">
+        <div class="site-test-card m-4" @click="takeBackend">
           <div class="d-flex justify-content-center align-content-center">
-            <img src="../assets/img/technical.png" alt class="site-test-tech" />
-            <h1 class="text-center text-md-right p-4 site-test-tech-heading">
-              Technical
+            <img
+              src="../assets/img/backend.png"
+              alt
+              class="site-test-backend"
+            />
+            <h1 class="text-center text-md-right p-4 site-test-backend-heading">
+              Backend
             </h1>
           </div>
           <br />
           <br />
-          <h5 class="text-justify px-3 pb-4 site-test-tech-text">
+          <h5 class="text-justify px-3 pb-4 site-test-backend-text">
             This domain is for students who are engrossed with discovering,
             exploring and learning more about technology. It is the
             "functioning-organ" of our club thereby justifying its type.
@@ -86,19 +90,19 @@
   cursor: pointer;
 }
 @media screen and (min-width: 769px) {
-  .site-test-tech {
+  .site-test-backend {
     position: relative;
     top: -40px;
     left: -110px;
     max-height: 170px;
   }
-  .site-test-tech-heading {
+  .site-test-backend-heading {
     position: relative;
     top: 10px;
     left: -50px;
     font-weight: 600;
   }
-  .site-test-tech-text {
+  .site-test-backend-text {
     position: relative;
     top: -25px;
   }
@@ -150,7 +154,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .site-test-tech {
+  .site-test-backend {
     display: none;
   }
   .site-test-frontend {
@@ -172,12 +176,12 @@ export default {
     this.$store.dispatch("getTest");
   },
   methods: {
-    takeTech() {
-      if (localStorage.getItem("Tech") == "true")
+    takeBackend() {
+      if (localStorage.getItem("Backend") == "true")
         alert(
-          "You have already attempted the Technical test! You can attempt it only once!"
+          "You have already attempted the Backend test! You can attempt it only once!"
         );
-      else this.$router.push({ name: "TechnicalRules" });
+      else this.$router.push({ name: "BackendRules" });
     },
     takeDesign() {
       if (localStorage.getItem("Design") == "true")

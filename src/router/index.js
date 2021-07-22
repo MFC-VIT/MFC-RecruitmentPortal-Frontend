@@ -69,11 +69,11 @@ const routes = [
     }
   },
   {
-    path: "/test/technical",
-    name: "Technical",
-    component: loadView("Technical"),
+    path: "/test/backend",
+    name: "Backend",
+    component: loadView("Backend"),
     meta: {
-      title: "Technical Round 1 | MFC Recruitment 2021",
+      title: "Backend Round 1 | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -102,11 +102,11 @@ const routes = [
     }
   },
   {
-    path: "/test/techrules",
-    name: "TechnicalRules",
-    component: loadView("TechnicalRules"),
+    path: "/test/backendrules",
+    name: "BackendRules",
+    component: loadView("BackendRules"),
     meta: {
-      title: "Technical Test | Rules | MFC Recruitment 2021",
+      title: "Backends Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -200,7 +200,7 @@ const router = new VueRouter({
 
 router.beforeResolve((to, from, next) => {
   if (
-    (from.name == "Technical" ||
+    (from.name == "Backend" ||
       from.name == "Design" ||
       from.name == "App" ||
       from.name == "Frontend") &&

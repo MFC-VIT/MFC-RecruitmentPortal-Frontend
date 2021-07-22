@@ -3,7 +3,7 @@
     <b-row align-h="center" align-v="center">
       <b-col cols="10">
         <h3 class="text-center text-moz-orange mt-1 mt-md-3">
-          <strong>Tech Domain</strong>
+          <strong>Backend Domain</strong>
         </h3>
         <br />
         <center>
@@ -12,8 +12,8 @@
         <br />
         <br />
         <!-- <div v-for="item in this.questions.mcq" :key="item.question_id">
-          <b-img-lazy class="site-tech-img my-2" fluid-grow :src="item.question"></b-img-lazy>
-          <div class="site-tech-mcqopt pl-5 text-moz-orange my-2">
+          <b-img-lazy class="site-backend-img my-2" fluid-grow :src="item.question"></b-img-lazy>
+          <div class="site-backend-mcqopt pl-5 text-moz-orange my-2">
             <input
               type="radio"
               :ref="item.question_id"
@@ -52,12 +52,12 @@
         </div>-->
         <div v-for="item in this.questions.mcq" :key="item.question_id">
           <b-img-lazy
-            class="site-tech-img my-2"
+            class="site-backend-img my-2"
             fluid-grow
             :src="item.question"
           ></b-img-lazy>
           <b-form-group
-            class="site-tech-mcqopt pl-4 text-moz-orange my-2"
+            class="site-backend-mcqopt pl-4 text-moz-orange my-2"
             v-slot="{ ariaDescribedby }"
           >
             <b-form-radio-group
@@ -90,13 +90,13 @@
         </div>
         <div v-for="item in this.questions.write" :key="item.question_id">
           <b-img-lazy
-            class="site-tech-img my-2"
+            class="site-backend-img my-2"
             fluid-grow
             :src="item.question"
           ></b-img-lazy>
           <textarea
             rows="5"
-            class="site-tech-ta my-2 px-5 py-4"
+            class="site-backend-ta my-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
           >
@@ -124,7 +124,7 @@ Type your answer here!</textarea
 import axios from "axios";
 import BaseTimer from "../components/BaseTimer";
 export default {
-  name: "Technical",
+  name: "Backend",
   data() {
     return {
       questions: [],
@@ -166,7 +166,7 @@ export default {
     async sendAnswers() {
       this.isSubmitted = true;
       // eslint-disable-next-line
-      var getAPI = axios.create({
+			var getAPI = axios.create({
         baseURL: "https://mfcrecruitment.herokuapp.com/",
         timeout: 3000,
         headers: {
@@ -188,14 +188,14 @@ export default {
         });
       });
       // eslint-disable-next-line
-      return new Promise((resolve, reject) => {
+			return new Promise((resolve, reject) => {
         getAPI
           .post(
-            "https://mfcrecruitment.herokuapp.com/api/send_tech_responses/",
+            "https://mfcrecruitment.herokuapp.com/api/send_backend_responses/",
             this.answers
           )
           // eslint-disable-next-line
-          .then(response => {
+					.then((response) => {
             this.$router.push({ name: "TestThanks" });
           })
           .catch(error => {
@@ -211,9 +211,9 @@ export default {
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Tech") == "true") {
+    if (localStorage.getItem("Backend") == "true") {
       alert(
-        "You have already attempted the Technical test! You can attempt it only once!"
+        "You have already attempted the Backend test! You can attempt it only once!"
       );
       this.$router.push("/test");
     }
@@ -224,12 +224,12 @@ export default {
         Authorization: "Bearer " + localStorage.getItem("accessToken")
       }
     });
-    this.$store.dispatch("getTechnical").catch(err => {
+    this.$store.dispatch("getBackend").catch(err => {
       console.log(err);
     });
     return new Promise((resolve, reject) => {
       getAPI
-        .get("https://mfcrecruitment.herokuapp.com/api/technicalquestions/")
+        .get("https://mfcrecruitment.herokuapp.com/api/backendquestions/")
         .then(response => {
           this.questions = response.data;
           resolve(true);
@@ -243,14 +243,14 @@ export default {
 </script>
 
 <style>
-.site-tech-img {
+.site-backend-img {
   opacity: 0.8;
 }
-.site-tech-mcqopt {
+.site-backend-mcqopt {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
 }
-.site-tech-ta {
+.site-backend-ta {
   border-radius: 10px;
   width: 100%;
 }

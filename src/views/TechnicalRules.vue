@@ -61,19 +61,19 @@ li {
 
 <script>
 export default {
-  name: "TechnicalRules",
+  name: "BackendRules",
   methods: {
     goBack() {
       this.$router.push({ name: "Test" });
     },
     goNext() {
-      this.$router.push({ name: "Technical" });
+      this.$router.push({ name: "Backend" });
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Tech") == "true") {
+    if (localStorage.getItem("Backend") == "true") {
       alert(
-        "You have already attempted the Technical test! You can attempt it only once!"
+        "You have already attempted the Backend test! You can attempt it only once!"
       );
       this.$router.push("/test");
     }

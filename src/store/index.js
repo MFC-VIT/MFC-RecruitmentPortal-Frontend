@@ -20,7 +20,7 @@ export default new Vuex.Store({
     refreshToken: null,
     APIData: "",
     authenticated: false,
-    Tech: null,
+    Backend: null,
     Frontend: null,
     Design: null,
     App: null
@@ -30,7 +30,7 @@ export default new Vuex.Store({
       state.authenticated = !state.authenticated;
     },
     setTestStatus(state, response) {
-      state.Tech = response.data.technical;
+      state.Backend = response.data.backend;
       state.Frontend = response.data.frontend;
       state.Design = response.data.design;
       state.App = response.data.app;
@@ -150,14 +150,14 @@ export default new Vuex.Store({
       getAPI
         .get("https://mfcrecruitment.herokuapp.com/api/user_test/")
         .then(response => {
-          localStorage.setItem("Tech", response.data.technical),
+          localStorage.setItem("Backend", response.data.backend),
             localStorage.setItem("Frontend", response.data.frontend),
             localStorage.setItem("App", response.data.app),
             localStorage.setItem("Design", response.data.design);
         });
     },
 
-    async getTechnical({ dispatch }) {
+    async getBackend({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
