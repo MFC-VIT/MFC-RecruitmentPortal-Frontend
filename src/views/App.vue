@@ -118,12 +118,6 @@ export default {
     }
   },
   beforeMount() {
-    if (localStorage.getItem("App") == "true") {
-      alert(
-        "You have already attempted the App test! You can attempt it only once!"
-      );
-      this.$router.push("/test");
-    }
     var getAPI = axios.create({
       baseURL: "https://mfcrecruitment.herokuapp.com/",
       timeout: 3000,

@@ -94,12 +94,6 @@ export default {
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Frontend") == "true") {
-      alert(
-        "You have already attempted the Frontend test! You can attempt it only once!"
-      );
-      this.$router.push("/test");
-    }
     var getAPI = axios.create({
       baseURL: "https://mfcrecruitment.herokuapp.com/",
       timeout: 3000,
