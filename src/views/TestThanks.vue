@@ -2,7 +2,7 @@
   <b-container fluid>
     <b-row class="site-tt-main-bg ml-5 mr-5 mt-2 mt-md-5 p-5">
       <b-col offset="3" cols="6" class="d-md-none">
-        <b-img fluid :src="require('../assets/img/logo.png')"></b-img>
+        <b-img fluid :src="require('../assets/img/logo.png')" />
       </b-col>
       <b-col md="8">
         <h1 class="site-tt-text-1">You are finished with the test!!!</h1>
