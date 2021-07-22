@@ -18,26 +18,26 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    meta: { title: "Home | MFC Recruitment 2020", authwall: false }
+    meta: { title: "Home | MFC Recruitment 2021", authwall: false }
   },
   {
     path: "/user/login",
     name: "Login",
     component: loadView("Login"),
-    meta: { title: "Login | MFC Recruitment 2020", authwall: false }
+    meta: { title: "Login | MFC Recruitment 2021", authwall: false }
   },
   {
     path: "/user/register",
     name: "Register",
     component: loadView("Register"),
-    meta: { title: "Register | MFC Recruitment 2020", authwall: false }
+    meta: { title: "Register | MFC Recruitment 2021", authwall: false }
   },
   {
     path: "/user/verify",
     name: "Verify",
     component: loadView("Verify"),
     meta: {
-      title: "Verify your Email | MFC Recruitment 2020",
+      title: "Verify your Email | MFC Recruitment 2021",
       authwall: false
     }
   },
@@ -46,7 +46,7 @@ const routes = [
     name: "Reset",
     component: loadView("Reset"),
     meta: {
-      title: "Reset your Password | MFC Recruitment 2020",
+      title: "Reset your Password | MFC Recruitment 2021",
       authwall: false
     }
   },
@@ -55,7 +55,7 @@ const routes = [
     name: "NewPassword",
     component: loadView("NewPassword"),
     meta: {
-      title: "Set New Password | MFC Recruitment 2020",
+      title: "Set New Password | MFC Recruitment 2021",
       authwall: false
     }
   },
@@ -64,7 +64,7 @@ const routes = [
     name: "Reseted",
     component: loadView("Reseted"),
     meta: {
-      title: "New Password Set | MFC Recruitment 2020",
+      title: "New Password Set | MFC Recruitment 2021",
       authwall: false
     }
   },
@@ -73,7 +73,7 @@ const routes = [
     name: "Technical",
     component: loadView("Technical"),
     meta: {
-      title: "Technical Round 1 | MFC Recruitment 2020",
+      title: "Technical Round 1 | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -82,7 +82,7 @@ const routes = [
     name: "Frontend",
     component: loadView("Frontend"),
     meta: {
-      title: "Frontend Round 1 | MFC Recruitment 2020",
+      title: "Frontend Round 1 | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -90,14 +90,14 @@ const routes = [
     path: "/test/design",
     name: "Design",
     component: loadView("Design"),
-    meta: { title: "Design Round 1 | MFC Recruitment 2020", authwall: true }
+    meta: { title: "Design Round 1 | MFC Recruitment 2021", authwall: true }
   },
   {
     path: "/test/app",
     name: "App",
     component: loadView("AppD"),
     meta: {
-      title: "App Round 1 | MFC Recruitment 2020",
+      title: "App Round 1 | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -106,7 +106,7 @@ const routes = [
     name: "TechnicalRules",
     component: loadView("TechnicalRules"),
     meta: {
-      title: "Technical Test | Rules | MFC Recruitment 2020",
+      title: "Technical Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -115,7 +115,7 @@ const routes = [
     name: "FrontendRules",
     component: loadView("FrontendRules"),
     meta: {
-      title: "Frontend Test | Rules | MFC Recruitment 2020",
+      title: "Frontend Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -124,7 +124,7 @@ const routes = [
     name: "DesignRules",
     component: loadView("DesignRules"),
     meta: {
-      title: "Design Test | Rules | MFC Recruitment 2020",
+      title: "Design Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -133,7 +133,7 @@ const routes = [
     name: "AppRules",
     component: loadView("AppRules"),
     meta: {
-      title: "App Test | Rules | MFC Recruitment 2020",
+      title: "App Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -142,7 +142,7 @@ const routes = [
     name: "TestThanks",
     component: loadView("TestThanks"),
     meta: {
-      title: "Thank You for taking the Test | MFC Recruitment 2020",
+      title: "Thank You for taking the Test | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -150,14 +150,14 @@ const routes = [
     path: "/rules",
     name: "Rules",
     component: loadView("Rules"),
-    meta: { title: "Rules | MFC Recruitment 2020", authwall: false }
+    meta: { title: "Rules | MFC Recruitment 2021", authwall: false }
   },
   {
     path: "/user/thanks",
     name: "Thanks",
     component: loadView("Thanks"),
     meta: {
-      title: "Thanks for Registering | MFC Recruitment 2020",
+      title: "Thanks for Registering | MFC Recruitment 2021",
       authwall: false
     }
   },
@@ -165,7 +165,7 @@ const routes = [
     path: "/test",
     name: "Test",
     component: loadView("Test"),
-    meta: { title: "Take Tests | MFC Recruitment 2020", authwall: true }
+    meta: { title: "Take Tests | MFC Recruitment 2021", authwall: true }
   },
   {
     path: "/social/linkedin",
