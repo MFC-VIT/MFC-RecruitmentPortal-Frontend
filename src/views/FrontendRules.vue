@@ -61,19 +61,19 @@ li {
 
 <script>
 export default {
-  name: "MgmtRules",
+  name: "FrontendRules",
   methods: {
     goBack() {
       this.$router.push({ name: "Test" });
     },
     goNext() {
-      this.$router.push({ name: "Management" });
+      this.$router.push({ name: "Frontend" });
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Manage") == "true") {
+    if (localStorage.getItem("Frontend") == "true") {
       alert(
-        "You have already attempted the Management test! You can attempt it only once!"
+        "You have already attempted the Frontend test! You can attempt it only once!"
       );
       this.$router.push("/test");
     }

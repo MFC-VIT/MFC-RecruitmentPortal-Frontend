@@ -78,11 +78,11 @@ const routes = [
     }
   },
   {
-    path: "/test/management",
-    name: "Management",
-    component: loadView("Management"),
+    path: "/test/frontend",
+    name: "Frontend",
+    component: loadView("Frontend"),
     meta: {
-      title: "Management Round 1 | MFC Recruitment 2020",
+      title: "Frontend Round 1 | MFC Recruitment 2020",
       authwall: true
     }
   },
@@ -111,11 +111,11 @@ const routes = [
     }
   },
   {
-    path: "/test/mgmtrules",
-    name: "MgmtRules",
-    component: loadView("MgmtRules"),
+    path: "/test/frontendrules",
+    name: "FrontendRules",
+    component: loadView("FrontendRules"),
     meta: {
-      title: "Management Test | Rules | MFC Recruitment 2020",
+      title: "Frontend Test | Rules | MFC Recruitment 2020",
       authwall: true
     }
   },
@@ -203,7 +203,7 @@ router.beforeResolve((to, from, next) => {
     (from.name == "Technical" ||
       from.name == "Design" ||
       from.name == "App" ||
-      from.name == "Management") &&
+      from.name == "Frontend") &&
     to.name != "TestThanks"
   ) {
     alert(

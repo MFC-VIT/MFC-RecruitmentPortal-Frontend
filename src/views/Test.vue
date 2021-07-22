@@ -39,20 +39,22 @@
         </div>
       </b-col>
       <b-col md="5">
-        <div class="site-test-card m-4" @click="takeMgmt">
+        <div class="site-test-card m-4" @click="takeFrontend">
           <div class="d-flex justify-content-center align-content-center">
-            <h1 class="text-center text-md-right p-4 site-test-mgmt-heading">
-              Management
+            <h1
+              class="text-center text-md-right p-4 site-test-frontend-heading"
+            >
+              Frontend
             </h1>
             <img
-              src="../assets/img/management.png"
+              src="../assets/img/frontend.png"
               alt
-              class="site-test-mgmt"
+              class="site-test-frontend"
             />
           </div>
-          <h5 class="text-justify px-3 pb-4 site-test-mgmt-text">
-            The Management domain is built to assist the club members of MFC
-            team for systematic and effective functioning of the club. It is the
+          <h5 class="text-justify px-3 pb-4 site-test-frontend-text">
+            The Frontend domain is built to assist the club members of MFC team
+            for systematic and effective functioning of the club. It is the
             ultimate "power-house" of the club.
           </h5>
         </div>
@@ -100,19 +102,19 @@
     position: relative;
     top: -25px;
   }
-  .site-test-mgmt {
+  .site-test-frontend {
     position: relative;
     top: -50px;
     left: 70px;
     max-height: 170px;
   }
-  .site-test-mgmt-heading {
+  .site-test-frontend-heading {
     position: relative;
     top: 10px;
     left: 50px;
     font-weight: 600;
   }
-  .site-test-mgmt-text {
+  .site-test-frontend-text {
     position: relative;
     top: -25px;
   }
@@ -151,7 +153,7 @@
   .site-test-tech {
     display: none;
   }
-  .site-test-mgmt {
+  .site-test-frontend {
     display: none;
   }
   .site-test-desg {
@@ -184,12 +186,12 @@ export default {
         );
       else this.$router.push({ name: "DesignRules" });
     },
-    takeMgmt() {
-      if (localStorage.getItem("Manage") == "true")
+    takeFrontend() {
+      if (localStorage.getItem("Frontend") == "true")
         alert(
-          "You have already attempted the Management test! You can attempt it only once!"
+          "You have already attempted the Frontend test! You can attempt it only once!"
         );
-      else this.$router.push({ name: "MgmtRules" });
+      else this.$router.push({ name: "FrontendRules" });
     },
     takeApp() {
       if (localStorage.getItem("App") == "true")

@@ -3,7 +3,7 @@
     <b-row align-h="center" align-v="center">
       <b-col cols="10">
         <h3 class="text-center text-moz-orange mt-1 mt-md-3">
-          <strong>Management Domain</strong>
+          <strong>Frontend Domain</strong>
         </h3>
         <br />
         <center>
@@ -13,13 +13,13 @@
         <br />
         <div v-for="item in this.questions" :key="item.question_id">
           <b-img-lazy
-            class="site-mgmt-img m-2"
+            class="site-frontend-img m-2"
             fluid-grow
             :src="item.question"
           ></b-img-lazy>
           <textarea
             rows="5"
-            class="site-mgmt-ta m-2 px-5 py-4"
+            class="site-frontend-ta m-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your answer here!"
           >
@@ -46,7 +46,7 @@ Type your answer here!</textarea
 import axios from "axios";
 import BaseTimer from "../components/BaseTimer";
 export default {
-  name: "Management",
+  name: "Frontend",
   data() {
     return {
       questions: [],
@@ -80,7 +80,7 @@ export default {
           answer: document.getElementById(item.question_id).value
         });
       });
-      this.$store.dispatch("getManagement").catch(err => {
+      this.$store.dispatch("getFrontend").catch(err => {
         console.log(err);
       });
       // eslint-disable-next-line
@@ -101,9 +101,9 @@ export default {
     }
   },
   beforeMount() {
-    if (localStorage.getItem("Manage") == "true") {
+    if (localStorage.getItem("Frontend") == "true") {
       alert(
-        "You have already attempted the Management test! You can attempt it only once!"
+        "You have already attempted the Frontend test! You can attempt it only once!"
       );
       this.$router.push("/test");
     }
@@ -114,12 +114,12 @@ export default {
         Authorization: "Bearer " + localStorage.getItem("accessToken")
       }
     });
-    this.$store.dispatch("getManagement").catch(err => {
+    this.$store.dispatch("getFrontend").catch(err => {
       console.log(err);
     });
     return new Promise((resolve, reject) => {
       getAPI
-        .get("https://mfcrecruitment.herokuapp.com/api/managementquestions/")
+        .get("https://mfcrecruitment.herokuapp.com/api/frontendquestions/")
         .then(response => {
           this.questions = response.data.write;
           resolve(true);
@@ -133,10 +133,10 @@ export default {
 </script>
 
 <style>
-.site-mgmt-img {
+.site-frontend-img {
   opacity: 0.8;
 }
-.site-mgmt-ta {
+.site-frontend-ta {
   border-radius: 10px;
   width: 100%;
   font-size: 1.25rem;
