@@ -15,7 +15,7 @@
           </li>
           <li class="p-1">
             <h3>
-              For submitting the task, upload the code on github and submit the
+              For submitting the task, upload the task on GDrive and submit the
               repository link (Make sure that it's public).
             </h3>
           </li>
