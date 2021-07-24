@@ -8,7 +8,7 @@
           class="site-login-logo"
         />
         <h3 class="text-white text-center site-login-nishchay">
-          Wishes you luck!!!
+          Login
         </h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-login-form">
           <b-form-group

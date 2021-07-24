@@ -8,7 +8,7 @@
           class="site-register-logo"
         />
         <h3 class="text-white text-center site-register-nishchay">
-          Wishes you luck!!!
+          Register
         </h3>
         <b-form @submit="onSubmit" class="pb-2 text-white site-register-form">
           <b-form-group
