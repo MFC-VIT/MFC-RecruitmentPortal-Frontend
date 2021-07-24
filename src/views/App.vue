@@ -8,7 +8,7 @@
         <br />
         <br />
         <br />
-        <div v-for="item in this.questions.short" :key="item.question_id">
+        <div v-for="item in this.questions" :key="item.question_id">
           <b-img-lazy
             class="site-app-img m-2"
             fluid-grow
@@ -20,25 +20,8 @@
             :id="item.question_id"
             placeholder="Type your answer here!"
           >
-Type your answer here!</textarea
-          >
-          <br />
-          <br />
-        </div>
-        <div v-for="item in this.questions.long" :key="item.question_id">
-          <b-img-lazy
-            class="site-app-img m-2"
-            fluid-grow
-            :src="item.question"
-          ></b-img-lazy>
-          <textarea
-            rows="5"
-            class="site-app-ta m-2 px-5"
-            :id="item.question_id"
-            placeholder="Type your answer here!"
-          >
-Type your answer here!</textarea
-          >
+          Type your answer here!
+          </textarea>
           <br />
           <br />
         </div>
@@ -59,7 +42,7 @@ Type your answer here!</textarea
 <script>
 import axios from "axios";
 export default {
-  name: "AppD",
+  name: "App",
   data() {
     return {
       questions: [],
@@ -83,16 +66,9 @@ export default {
           Authorization: "Bearer " + localStorage.getItem("accessToken")
         }
       });
-      this.questions.short.forEach(item => {
+      this.questions.forEach(item => {
         this.answers.push({
-          domain: "3",
-          question: item.question,
-          answer: document.getElementById(item.question_id).value
-        });
-      });
-      this.questions.long.forEach(item => {
-        this.answers.push({
-          domain: "3",
+          domain: "4",
           question: item.question,
           answer: document.getElementById(item.question_id).value
         });
