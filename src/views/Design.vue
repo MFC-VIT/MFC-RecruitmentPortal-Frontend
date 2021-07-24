@@ -20,8 +20,8 @@
             :id="item.question_id"
             placeholder="Type your answer here!"
           >
-Type your answer here!</textarea
-          >
+          Type your answer here!
+          </textarea>
           <br />
           <br />
         </div>
@@ -68,7 +68,7 @@ export default {
       });
       this.questions.forEach(item => {
         this.answers.push({
-          domain: "4",
+          domain: "5",
           question: item.question,
           answer: document.getElementById(item.question_id).value
         });
