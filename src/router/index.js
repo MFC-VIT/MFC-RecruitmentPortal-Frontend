@@ -1,12 +1,15 @@
+/* eslint-disable no-unused-vars */
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 import store from "../store/index";
+import "../assets/css/nprogress.css";
 
 Vue.use(VueRouter);
 
-NProgress.configure({ showSpinner: false });
+NProgress.configure({ showSpinner: true });
 
 function loadView(view) {
   return () =>
