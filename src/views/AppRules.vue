@@ -15,8 +15,8 @@
           </li>
           <li class="p-1">
             <h3>
-              For submitting the task, upload the apk on GitHub/GDrive and
-              submit the repository link (Make sure that it's public).
+              For submitting the task, upload the code & apk on GitHub/GDrive
+              and submit the repository link (Make sure that it's public).
             </h3>
           </li>
           <li class="p-1">
