@@ -69,20 +69,20 @@ const routes = [
     }
   },
   {
-    path: "/test/backend",
-    name: "Backend",
-    component: loadView("Backend"),
-    meta: {
-      title: "Backend Round 1 | MFC Recruitment 2021",
-      authwall: true
-    }
-  },
-  {
     path: "/test/frontend",
     name: "Frontend",
     component: loadView("Frontend"),
     meta: {
       title: "Frontend Round 1 | MFC Recruitment 2021",
+      authwall: true
+    }
+  },
+  {
+    path: "/test/backend",
+    name: "Backend",
+    component: loadView("Backend"),
+    meta: {
+      title: "Backend Round 1 | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -102,11 +102,11 @@ const routes = [
     }
   },
   {
-    path: "/test/backendrules",
-    name: "BackendRules",
-    component: loadView("BackendRules"),
+    path: "/test/ml",
+    name: "ML",
+    component: loadView("ML"),
     meta: {
-      title: "Backends Test | Rules | MFC Recruitment 2021",
+      title: "ML Round 1 | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -116,6 +116,15 @@ const routes = [
     component: loadView("FrontendRules"),
     meta: {
       title: "Frontend Test | Rules | MFC Recruitment 2021",
+      authwall: true
+    }
+  },
+  {
+    path: "/test/backendrules",
+    name: "BackendRules",
+    component: loadView("BackendRules"),
+    meta: {
+      title: "Backend Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -134,6 +143,15 @@ const routes = [
     component: loadView("AppRules"),
     meta: {
       title: "App Test | Rules | MFC Recruitment 2021",
+      authwall: true
+    }
+  },
+  {
+    path: "/test/mlrules",
+    name: "MLRules",
+    component: loadView("MLRules"),
+    meta: {
+      title: "ML Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
@@ -199,22 +217,10 @@ const router = new VueRouter({
 });
 
 router.beforeResolve((to, from, next) => {
-  if (
-    (from.name == "Backend" ||
-      from.name == "Design" ||
-      from.name == "App" ||
-      from.name == "Frontend") &&
-    to.name != "TestThanks"
-  ) {
-    alert(
-      "You are not allowed to go back while giving a test! If you go back, your test will auto-submit!"
-    );
-  } else {
-    if (to.path) {
-      NProgress.start();
-    }
-    next();
+  if (to.path) {
+    NProgress.start();
   }
+  next();
 });
 
 router.afterEach(() => {
