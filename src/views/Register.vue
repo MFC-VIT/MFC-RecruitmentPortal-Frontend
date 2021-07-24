@@ -49,6 +49,8 @@
               pattern="20[A-Za-z]{3}[0-9]{4}"
               minlength="9"
               maxlength="9"
+              oninvalid="this.setCustomValidity('Only 2020 Batch is elligible')"
+              oninput="this.setCustomValidity('')"
               required
             ></b-form-input>
           </b-form-group>
