@@ -2,7 +2,7 @@
   <b-container>
     <center>
       <h2 class="mt-5 text-moz-orange">
-        Thanks for registering! We will get back to you shortly!
+        Thanks for registering! See you on 26th!
       </h2>
       <br />
       <b-button to="/user/login" pill variant="moz-orange">
