@@ -23,7 +23,8 @@ export default new Vuex.Store({
     Backend: null,
     Frontend: null,
     Design: null,
-    App: null
+    App: null,
+    ML: null
   },
   mutations: {
     setAuthentication(state) {
@@ -34,6 +35,7 @@ export default new Vuex.Store({
       state.Frontend = response.data.frontend;
       state.Design = response.data.design;
       state.App = response.data.app;
+      state.ML = response.data.ML;
     }
   },
   actions: {
@@ -154,6 +156,7 @@ export default new Vuex.Store({
             localStorage.setItem("Frontend", response.data.frontend),
             localStorage.setItem("App", response.data.app),
             localStorage.setItem("Design", response.data.design);
+          localStorage.setItem("ML", response.data.ML);
         });
     },
 
@@ -185,6 +188,15 @@ export default new Vuex.Store({
     },
 
     async getApp({ dispatch }) {
+      await dispatch("getRefreshToken");
+      getAPI = axios.create({
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("accessToken")
+        }
+      });
+    },
+
+    async getML({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
