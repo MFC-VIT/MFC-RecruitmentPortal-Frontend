@@ -20,8 +20,8 @@
             :id="item.question_id"
             placeholder="Type your answer here!"
           >
-Type your answer here!</textarea
-          >
+          Type your answer here!
+          </textarea>
           <br />
           <br />
         </div>
@@ -68,7 +68,7 @@ export default {
       });
       this.questions.forEach(item => {
         this.answers.push({
-          domain: "2",
+          domain: "1",
           question: item.question,
           answer: document.getElementById(item.question_id).value
         });
@@ -80,7 +80,7 @@ export default {
       return new Promise((resolve, reject) => {
         getAPI
           .post(
-            "https://mfcrecruitment.herokuapp.com/api/send_mang_responses/",
+            "https://mfcrecruitment.herokuapp.com/api/send_front_responses/",
             this.answers
           )
           // eslint-disable-next-line
