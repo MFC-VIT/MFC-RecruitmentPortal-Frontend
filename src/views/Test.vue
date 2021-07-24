@@ -5,78 +5,87 @@
         <strong>Select the Domain</strong>
       </h3>
     </center>
-    <b-row class="text-white" align-h="center">
+    <b-row class="text-white no-gutters" align-h="center">
       <b-col md="5">
-        <div class="site-test-card m-4" @click="takeBackend">
+        <div class="site-test-card m-2" @click="takeFrontend">
           <div class="d-flex justify-content-center align-content-center">
-            <img
-              src="../assets/img/backend.png"
-              alt
-              class="site-test-backend"
-            />
-            <h1 class="text-center text-md-right p-4 site-test-backend-heading">
-              Backend
+            <h1 class="text-center p-2">
+              Frontend
             </h1>
           </div>
-          <br />
-          <br />
-          <h5 class="text-justify px-3 pb-4 site-test-backend-text">
-            This domain is for students who are engrossed with discovering,
-            exploring and learning more about technology. It is the
-            "functioning-organ" of our club thereby justifying its type.
+          <h5 class="text-justify px-3 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
+            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
+            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
+            omnis.
           </h5>
-        </div>
-        <br />
-        <div class="site-test-card m-4" @click="takeDesign">
-          <h1 class="text-center p-4 site-test-desg-heading">Design & Media</h1>
-          <h5 class="text-right px-3 site-test-desg-text">
-            The purpose design is to promote and encourage interest in the field
-            of graphic and media design to students. It serves to instigate and
-            enrich the creativeness among the students of the club.
-          </h5>
-          <div class="d-flex justify-content-center align-content-center">
-            <img src="../assets/img/design.png" alt class="site-test-desg" />
-            <h5 class="text-right px-3 site-test-desg-text">
-              Join in and learn to ideate and create!
-            </h5>
-          </div>
         </div>
       </b-col>
       <b-col md="5">
-        <div class="site-test-card m-4" @click="takeFrontend">
+        <div class="site-test-card m-2" @click="takeBackend">
           <div class="d-flex justify-content-center align-content-center">
-            <h1
-              class="text-center text-md-right p-4 site-test-frontend-heading"
-            >
-              Frontend
+            <h1 class="text-center p-2">
+              Backend
             </h1>
-            <img
-              src="../assets/img/frontend.png"
-              alt
-              class="site-test-frontend"
-            />
           </div>
-          <h5 class="text-justify px-3 pb-4 site-test-frontend-text">
-            The Frontend domain is built to assist the club members of MFC team
-            for systematic and effective functioning of the club. It is the
-            ultimate "power-house" of the club.
+          <h5 class="text-justify px-3 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
+            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
+            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
+            omnis.
           </h5>
         </div>
-        <br />
-        <div class="site-test-card m-4" @click="takeApp">
-          <h1 class="text-center p-4 site-test-app-heading">App</h1>
-          <br />
-          <h5 class="text-left px-3 site-test-left-text">
-            This domain provides exclusive exposure to students in order to
-            unleash their creativity as well as develop intellectual writing
-            capabilities so as to produce authentic content in authentic styles.
-          </h5>
+      </b-col>
+    </b-row>
+    <b-row class="text-white" align-h="center">
+      <b-col md="10">
+        <div class="site-test-card m-2" @click="takeDesign">
           <div class="d-flex justify-content-center align-content-center">
-            <h5 class="text-left px-3">
-              Exercise your brain and tantalise the readers!
-            </h5>
-            <img src="../assets/img/app.png" alt class="site-test-app" />
+            <h1 class="text-center p-2">
+              Design
+            </h1>
           </div>
+          <h5 class="text-justify px-3 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
+            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
+            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
+            omnis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Ullam esse, rerum, quaerat, accusamus illum maxime magnam vel
+            doloremque fugit eaque tempore libero distinctio placeat velit.
+            Quibusdam repellat velit itaque unde!
+          </h5>
+        </div>
+      </b-col>
+    </b-row>
+    <b-row class="text-white no-gutters" align-h="center">
+      <b-col md="5">
+        <div class="site-test-card m-2" @click="takeApp">
+          <div class="d-flex justify-content-center align-content-center">
+            <h1 class="text-center p-2">
+              App
+            </h1>
+          </div>
+          <h5 class="text-justify px-3 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
+            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
+            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
+            omnis.
+          </h5>
+        </div>
+      </b-col>
+      <b-col md="5">
+        <div class="site-test-card m-2" @click="takeML">
+          <div class="d-flex justify-content-center align-content-center">
+            <h1 class="text-center p-2">
+              ML
+            </h1>
+          </div>
+          <h5 class="text-justify px-3 pb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
+            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
+            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
+            omnis.
+          </h5>
         </div>
       </b-col>
     </b-row>
@@ -90,50 +99,50 @@
   cursor: pointer;
 }
 @media screen and (min-width: 769px) {
-  .site-test-backend {
+  .site-test-frontend {
     position: relative;
     top: -40px;
     left: -110px;
     max-height: 170px;
   }
-  .site-test-backend-heading {
-    position: relative;
-    top: 10px;
-    left: -50px;
-    font-weight: 600;
-  }
-  .site-test-backend-text {
-    position: relative;
-    top: -25px;
-  }
-  .site-test-frontend {
-    position: relative;
-    top: -50px;
-    left: 70px;
-    max-height: 170px;
-  }
   .site-test-frontend-heading {
     position: relative;
     top: 10px;
-    left: 50px;
+    left: -50px;
     font-weight: 600;
   }
   .site-test-frontend-text {
     position: relative;
     top: -25px;
   }
-  .site-test-desg {
+  .site-test-backend {
+    position: relative;
+    top: -50px;
+    left: 70px;
+    max-height: 170px;
+  }
+  .site-test-backend-heading {
+    position: relative;
+    top: 10px;
+    left: 50px;
+    font-weight: 600;
+  }
+  .site-test-backend-text {
+    position: relative;
+    top: -25px;
+  }
+  .site-test-ml {
     position: relative;
     top: 30px;
     left: -50px;
     height: 140px;
   }
-  .site-test-desg-heading {
+  .site-test-ml-heading {
     position: relative;
     top: 10px;
     font-weight: 600;
   }
-  .site-test-desg-text {
+  .site-test-ml-text {
     position: relative;
     top: 20px;
   }
@@ -154,13 +163,13 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .site-test-backend {
-    display: none;
-  }
   .site-test-frontend {
     display: none;
   }
-  .site-test-desg {
+  .site-test-backend {
+    display: none;
+  }
+  .site-test-ml {
     display: none;
   }
   .site-test-app {
@@ -176,33 +185,20 @@ export default {
     this.$store.dispatch("getTest");
   },
   methods: {
+    takeFrontend() {
+      this.$router.push({ name: "FrontendRules" });
+    },
     takeBackend() {
-      if (localStorage.getItem("Backend") == "true")
-        alert(
-          "You have already attempted the Backend test! You can attempt it only once!"
-        );
-      else this.$router.push({ name: "BackendRules" });
+      this.$router.push({ name: "BackendRules" });
     },
     takeDesign() {
-      if (localStorage.getItem("Design") == "true")
-        alert(
-          "You have already attempted the Design & Media test! You can attempt it only once!"
-        );
-      else this.$router.push({ name: "DesignRules" });
-    },
-    takeFrontend() {
-      if (localStorage.getItem("Frontend") == "true")
-        alert(
-          "You have already attempted the Frontend test! You can attempt it only once!"
-        );
-      else this.$router.push({ name: "FrontendRules" });
+      this.$router.push({ name: "DesignRules" });
     },
     takeApp() {
-      if (localStorage.getItem("App") == "true")
-        alert(
-          "You have already attempted the App test! You can attempt it only once!"
-        );
-      else this.$router.push({ name: "AppRules" });
+      this.$router.push({ name: "AppRules" });
+    },
+    takeML() {
+      this.$router.push({ name: "MLRules" });
     }
   }
 };
