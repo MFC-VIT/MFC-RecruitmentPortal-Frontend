@@ -94,7 +94,7 @@ const routes = [
   },
   {
     path: "/test/app",
-    name: "App",
+    name: "AppD",
     component: loadView("AppD"),
     meta: {
       title: "App Round 1 | MFC Recruitment 2021",
