@@ -67,7 +67,7 @@ export default {
       this.$router.push({ name: "Test" });
     },
     goNext() {
-      this.$router.push({ name: "App" });
+      this.$router.push({ name: "AppD" });
     }
   }
 };
