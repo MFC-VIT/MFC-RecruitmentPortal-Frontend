@@ -14,10 +14,8 @@
             </h1>
           </div>
           <h5 class="text-justify px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
-            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
-            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
-            omnis.
+            Its primarily focused on conversion of data to graphical interface
+            thereby enabling easy User Interaction with the website.
           </h5>
         </div>
       </b-col>
@@ -29,10 +27,8 @@
             </h1>
           </div>
           <h5 class="text-justify px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
-            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
-            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
-            omnis.
+            Its primarily focused on how the site works and how the database
+            information is communicated to the browser.
           </h5>
         </div>
       </b-col>
@@ -42,17 +38,14 @@
         <div class="site-test-card m-2" @click="takeDesign">
           <div class="d-flex justify-content-center align-content-center">
             <h1 class="text-center p-2">
-              Design
+              Design & Media
             </h1>
           </div>
           <h5 class="text-justify px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
-            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
-            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
-            omnis. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ullam esse, rerum, quaerat, accusamus illum maxime magnam vel
-            doloremque fugit eaque tempore libero distinctio placeat velit.
-            Quibusdam repellat velit itaque unde!
+            Design is all about creating, fashioning, executing, or constructing
+            according to a plan. Software tools like Photoshop and Figma are
+            used. Media involves working with video editing tools, VFX,
+            animations and a lot more cool stuff!
           </h5>
         </div>
       </b-col>
@@ -66,10 +59,8 @@
             </h1>
           </div>
           <h5 class="text-justify px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
-            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
-            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
-            omnis.
+            Its prime objective is to create software applications for operating
+            on mobile devices such as tablets, smartphones and smart watches.
           </h5>
         </div>
       </b-col>
@@ -81,10 +72,9 @@
             </h1>
           </div>
           <h5 class="text-justify px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam,
-            eligendi pariatur magni fuga ut fugit, voluptates unde, hic libero
-            maiores odit minima omnis consectetur! Quibusdam quidem doloribus at
-            omnis.
+            It's based on data analysis that automates analytical model
+            building, identifying patterns and making decisions with minimal
+            human intervention.
           </h5>
         </div>
       </b-col>
