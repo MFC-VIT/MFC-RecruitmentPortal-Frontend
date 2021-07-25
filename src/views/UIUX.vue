@@ -71,7 +71,7 @@ export default {
       });
       this.questions.forEach(item => {
         this.answers.push({
-          domain: "10",
+          domain: "6",
           question: item.question,
           answer: document.getElementById(item.question_id).value
         });
