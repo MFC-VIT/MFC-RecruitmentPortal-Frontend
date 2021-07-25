@@ -90,10 +90,28 @@ const routes = [
     }
   },
   {
+    path: "/test/uiux",
+    name: "UIUX",
+    component: loadView("UIUX"),
+    meta: { title: "UI/UX Round 1 | MFC Recruitment 2021", authwall: true }
+  },
+  {
     path: "/test/design",
     name: "Design",
     component: loadView("Design"),
-    meta: { title: "Design Round 1 | MFC Recruitment 2021", authwall: true }
+    meta: {
+      title: "Graphic Design Round 1 | MFC Recruitment 2021",
+      authwall: true
+    }
+  },
+  {
+    path: "/test/video",
+    name: "Video",
+    component: loadView("Video"),
+    meta: {
+      title: "Video Editing Round 1 | MFC Recruitment 2021",
+      authwall: true
+    }
   },
   {
     path: "/test/app",
@@ -132,11 +150,29 @@ const routes = [
     }
   },
   {
+    path: "/test/uiuxrules",
+    name: "UIUXRules",
+    component: loadView("UIUXRules"),
+    meta: {
+      title: "UI/UX Test | Rules | MFC Recruitment 2021",
+      authwall: true
+    }
+  },
+  {
     path: "/test/designrules",
     name: "DesignRules",
     component: loadView("DesignRules"),
     meta: {
-      title: "Design Test | Rules | MFC Recruitment 2021",
+      title: "Graphic Design Test | Rules | MFC Recruitment 2021",
+      authwall: true
+    }
+  },
+  {
+    path: "/test/videorules",
+    name: "VideoRules",
+    component: loadView("VideoRules"),
+    meta: {
+      title: "Video Editing Test | Rules | MFC Recruitment 2021",
       authwall: true
     }
   },
