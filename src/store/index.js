@@ -22,7 +22,9 @@ export default new Vuex.Store({
     authenticated: false,
     Backend: null,
     Frontend: null,
+    UIUX: null,
     Design: null,
+    Video: null,
     App: null,
     ML: null
   },
@@ -33,7 +35,9 @@ export default new Vuex.Store({
     setTestStatus(state, response) {
       state.Backend = response.data.backend;
       state.Frontend = response.data.frontend;
+      state.UIUX = response.data.UIUX;
       state.Design = response.data.design;
+      state.Video = response.data.video;
       state.App = response.data.app;
       state.ML = response.data.ML;
     }
@@ -155,7 +159,9 @@ export default new Vuex.Store({
           localStorage.setItem("Backend", response.data.backend),
             localStorage.setItem("Frontend", response.data.frontend),
             localStorage.setItem("App", response.data.app),
-            localStorage.setItem("Design", response.data.design);
+            localStorage.setItem("UIUX", response.data.UIUX);
+          localStorage.setItem("Design", response.data.design);
+          localStorage.setItem("Video", response.data.video);
           localStorage.setItem("ML", response.data.ML);
         });
     },
@@ -178,7 +184,23 @@ export default new Vuex.Store({
       });
     },
 
+    async getUIUX({ dispatch }) {
+      await dispatch("getRefreshToken");
+      getAPI = axios.create({
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("accessToken")
+        }
+      });
+    },
     async getDesign({ dispatch }) {
+      await dispatch("getRefreshToken");
+      getAPI = axios.create({
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("accessToken")
+        }
+      });
+    },
+    async getVideo({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
