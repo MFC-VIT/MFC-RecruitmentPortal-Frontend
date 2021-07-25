@@ -16,6 +16,7 @@
               :src="item.question"
               :href="item.link"
             ></b-img-lazy>
+          </a>
           <textarea
             rows="5"
             class="site-frontend-ta m-2 px-5 py-4"
