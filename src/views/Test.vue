@@ -34,7 +34,7 @@
       </b-col>
     </b-row>
     <b-row class="text-white" align-h="center">
-      <b-col md="10">
+      <b-col>
         <div class="site-test-card m-2" @click="takeDesign">
           <div class="d-flex justify-content-center align-content-center">
             <h1 class="text-center p-2">
