@@ -9,11 +9,14 @@
         <br />
         <br />
         <div v-for="item in this.questions" :key="item.question_id">
-          <b-img-lazy
-            class="site-desg-img m-2"
-            fluid-grow
-            :src="item.question"
-          ></b-img-lazy>
+          <a :href="item.link" target="_blank">
+            <b-img-lazy
+              class="site-desg-img m-2"
+              fluid-grow
+              :src="item.question"
+              :href="item.link"
+            ></b-img-lazy>
+          </a>
           <textarea
             rows="5"
             class="site-desg-ta m-2 px-5 py-4"
