@@ -9,7 +9,7 @@
         <ul>
           <li class="p-1">
             <h3>
-              This domain has 3 tasks. You have to submit atleast 1 task for
+              This domain has 2 tasks. You have to submit atleast 1 task for
               getting shortlisted for round 2.
             </h3>
           </li>
