@@ -11,7 +11,7 @@
         <div v-for="item in this.questions" :key="item.question_id">
           <a :href="item.link" target="_blank">
             <b-img-lazy
-              class="site-desg-img m-2"
+              class="site-tech-img m-2"
               fluid-grow
               :src="item.question"
               :href="item.link"
@@ -19,7 +19,7 @@
           </a>
           <textarea
             rows="5"
-            class="site-desg-ta m-2 px-5 py-4"
+            class="site-tech-ta m-2 px-5 py-4"
             :id="item.question_id"
             placeholder="Type your link here!"
           >
