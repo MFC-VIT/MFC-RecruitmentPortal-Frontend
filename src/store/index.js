@@ -20,26 +20,22 @@ export default new Vuex.Store({
     refreshToken: null,
     APIData: "",
     authenticated: false,
-    Backend: null,
-    Frontend: null,
-    UIUX: null,
+    Technical: null,
+    Management: null,
+    Editorial: null,
     Design: null,
-    Video: null,
-    App: null,
-    ML: null
+    Media: null
   },
   mutations: {
     setAuthentication(state) {
       state.authenticated = !state.authenticated;
     },
     setTestStatus(state, response) {
-      state.Backend = response.data.backend;
-      state.Frontend = response.data.frontend;
-      state.UIUX = response.data.UIUX;
+      state.Technical = response.data.technical;
+      state.Management = response.data.management;
+      state.Editorial = response.data.editorial;
       state.Design = response.data.design;
-      state.Video = response.data.video;
-      state.App = response.data.app;
-      state.ML = response.data.ML;
+      state.Media = response.data.media;
     }
   },
   actions: {
@@ -117,7 +113,7 @@ export default new Vuex.Store({
           })
           .catch(error => {
             if (error.response.status === 400) {
-              reject(new Error("Invalid Email or OTP. Try Again !!"), null);
+              reject(new Error("Invalid Email or OTP. Try Again!!"), null);
             } else reject(error.response.data.message);
           });
       });
@@ -156,17 +152,15 @@ export default new Vuex.Store({
       getAPI
         .get("https://mfcrec2022.herokuapp.com/api/user_test/")
         .then(response => {
-          localStorage.setItem("Backend", response.data.backend),
-            localStorage.setItem("Frontend", response.data.frontend),
-            localStorage.setItem("App", response.data.app),
-            localStorage.setItem("UIUX", response.data.UIUX);
-          localStorage.setItem("Design", response.data.design);
-          localStorage.setItem("Video", response.data.video);
-          localStorage.setItem("ML", response.data.ML);
+          localStorage.setItem("Technical", response.data.technical),
+            localStorage.setItem("Management", response.data.management),
+            localStorage.setItem("Editorial", response.data.editorial),
+            localStorage.setItem("Design", response.data.design);
+          localStorage.setItem("Media", response.data.media);
         });
     },
 
-    async getBackend({ dispatch }) {
+    async getTechnical({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
@@ -175,7 +169,7 @@ export default new Vuex.Store({
       });
     },
 
-    async getFrontend({ dispatch }) {
+    async getManagement({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
@@ -184,7 +178,7 @@ export default new Vuex.Store({
       });
     },
 
-    async getUIUX({ dispatch }) {
+    async getEditorial({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
@@ -192,6 +186,7 @@ export default new Vuex.Store({
         }
       });
     },
+
     async getDesign({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
@@ -200,25 +195,8 @@ export default new Vuex.Store({
         }
       });
     },
-    async getVideo({ dispatch }) {
-      await dispatch("getRefreshToken");
-      getAPI = axios.create({
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("accessToken")
-        }
-      });
-    },
 
-    async getApp({ dispatch }) {
-      await dispatch("getRefreshToken");
-      getAPI = axios.create({
-        headers: {
-          Authorization: "Bearer " + localStorage.getItem("accessToken")
-        }
-      });
-    },
-
-    async getML({ dispatch }) {
+    async getMedia({ dispatch }) {
       await dispatch("getRefreshToken");
       getAPI = axios.create({
         headers: {
