@@ -6,6 +6,9 @@
           <strong>Management Domain</strong>
         </h3>
         <br />
+        <center>
+          <BaseTimer @timer-finished="sendAnswers" />
+        </center>
         <br />
         <br />
         <div v-for="item in this.questions" :key="item.question_id">
@@ -44,6 +47,7 @@
 
 <script>
 import axios from "axios";
+import BaseTimer from "../components/BaseTimer";
 export default {
   name: "Management",
   data() {
@@ -52,6 +56,9 @@ export default {
       answers: [],
       isSubmitted: false
     };
+  },
+  components: {
+    BaseTimer
   },
   methods: {
     sleep(ms) {
