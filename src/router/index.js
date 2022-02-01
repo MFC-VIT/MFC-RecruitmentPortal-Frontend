@@ -21,26 +21,26 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    meta: { title: "Home | MFC Recruitment 2021", authwall: false }
+    meta: { title: "Home | MFC Recruitment 2022", authwall: false }
   },
   {
     path: "/user/login",
     name: "Login",
     component: loadView("Login"),
-    meta: { title: "Login | MFC Recruitment 2021", authwall: false }
+    meta: { title: "Login | MFC Recruitment 2022", authwall: false }
   },
   {
     path: "/user/register",
     name: "Register",
     component: loadView("Register"),
-    meta: { title: "Register | MFC Recruitment 2021", authwall: false }
+    meta: { title: "Register | MFC Recruitment 2022", authwall: false }
   },
   {
     path: "/user/verify",
     name: "Verify",
     component: loadView("Verify"),
     meta: {
-      title: "Verify your Email | MFC Recruitment 2021",
+      title: "Verify your Email | MFC Recruitment 2022",
       authwall: false
     }
   },
@@ -49,7 +49,7 @@ const routes = [
     name: "Reset",
     component: loadView("Reset"),
     meta: {
-      title: "Reset your Password | MFC Recruitment 2021",
+      title: "Reset your Password | MFC Recruitment 2022",
       authwall: false
     }
   },
@@ -58,7 +58,7 @@ const routes = [
     name: "NewPassword",
     component: loadView("NewPassword"),
     meta: {
-      title: "Set New Password | MFC Recruitment 2021",
+      title: "Set New Password | MFC Recruitment 2022",
       authwall: false
     }
   },
@@ -67,130 +67,94 @@ const routes = [
     name: "Reseted",
     component: loadView("Reseted"),
     meta: {
-      title: "New Password Set | MFC Recruitment 2021",
+      title: "New Password Set | MFC Recruitment 2022",
       authwall: false
     }
   },
   {
-    path: "/test/frontend",
-    name: "Frontend",
-    component: loadView("Frontend"),
+    path: "/test/take/technical",
+    name: "Technical",
+    component: loadView("Technical"),
     meta: {
-      title: "Frontend Round 1 | MFC Recruitment 2021",
+      title: "Technical Round 1 | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/backend",
-    name: "Backend",
-    component: loadView("Backend"),
+    path: "/test/take/management",
+    name: "Management",
+    component: loadView("Management"),
     meta: {
-      title: "Backend Round 1 | MFC Recruitment 2021",
+      title: "Management Round 1 | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/uiux",
-    name: "UIUX",
-    component: loadView("UIUX"),
-    meta: { title: "UI/UX Round 1 | MFC Recruitment 2021", authwall: true }
+    path: "/test/take/editorial",
+    name: "Editorial",
+    component: loadView("Editorial"),
+    meta: {
+      title: "Editorial Round 1 | MFC Recruitment 2022",
+      authwall: true
+    }
   },
   {
-    path: "/test/design",
+    path: "/test/take/design",
     name: "Design",
     component: loadView("Design"),
     meta: {
-      title: "Graphic Design Round 1 | MFC Recruitment 2021",
+      title: "Design Round 1 | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/video",
-    name: "Video",
-    component: loadView("Video"),
+    path: "/test/take/media",
+    name: "Media",
+    component: loadView("Media"),
+    meta: { title: "Media Round 1 | MFC Recruitment 2022", authwall: true }
+  },
+  {
+    path: "/test/rules/technical",
+    name: "TechnicalRules",
+    component: loadView("TechnicalRules"),
     meta: {
-      title: "Video Editing Round 1 | MFC Recruitment 2021",
+      title: "Technical Test | Rules | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/app",
-    name: "AppD",
-    component: loadView("AppD"),
+    path: "/test/rules/management",
+    name: "ManagementRules",
+    component: loadView("ManagementRules"),
     meta: {
-      title: "App Round 1 | MFC Recruitment 2021",
+      title: "Management Test | Rules | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/ml",
-    name: "ML",
-    component: loadView("ML"),
+    path: "/test/rules/editorial",
+    name: "EditorialRules",
+    component: loadView("EditorialRules"),
     meta: {
-      title: "ML Round 1 | MFC Recruitment 2021",
+      title: "Editorial Test | Rules | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/frontendrules",
-    name: "FrontendRules",
-    component: loadView("FrontendRules"),
-    meta: {
-      title: "Frontend Test | Rules | MFC Recruitment 2021",
-      authwall: true
-    }
-  },
-  {
-    path: "/test/backendrules",
-    name: "BackendRules",
-    component: loadView("BackendRules"),
-    meta: {
-      title: "Backend Test | Rules | MFC Recruitment 2021",
-      authwall: true
-    }
-  },
-  {
-    path: "/test/uiuxrules",
-    name: "UIUXRules",
-    component: loadView("UIUXRules"),
-    meta: {
-      title: "UI/UX Test | Rules | MFC Recruitment 2021",
-      authwall: true
-    }
-  },
-  {
-    path: "/test/designrules",
+    path: "/test/rules/design",
     name: "DesignRules",
     component: loadView("DesignRules"),
     meta: {
-      title: "Graphic Design Test | Rules | MFC Recruitment 2021",
+      title: "Design Test | Rules | MFC Recruitment 2022",
       authwall: true
     }
   },
   {
-    path: "/test/videorules",
-    name: "VideoRules",
-    component: loadView("VideoRules"),
+    path: "/test/rules/media",
+    name: "MediaRules",
+    component: loadView("MediaRules"),
     meta: {
-      title: "Video Editing Test | Rules | MFC Recruitment 2021",
-      authwall: true
-    }
-  },
-  {
-    path: "/test/apprules",
-    name: "AppRules",
-    component: loadView("AppRules"),
-    meta: {
-      title: "App Test | Rules | MFC Recruitment 2021",
-      authwall: true
-    }
-  },
-  {
-    path: "/test/mlrules",
-    name: "MLRules",
-    component: loadView("MLRules"),
-    meta: {
-      title: "ML Test | Rules | MFC Recruitment 2021",
+      title: "Media Test | Rules | MFC Recruitment 2022",
       authwall: true
     }
   },
@@ -199,7 +163,7 @@ const routes = [
     name: "TestThanks",
     component: loadView("TestThanks"),
     meta: {
-      title: "Thank You for taking the Test | MFC Recruitment 2021",
+      title: "Thank You for taking the Test | MFC Recruitment 2022",
       authwall: true
     }
   },
@@ -207,14 +171,14 @@ const routes = [
     path: "/rules",
     name: "Rules",
     component: loadView("Rules"),
-    meta: { title: "Rules | MFC Recruitment 2021", authwall: false }
+    meta: { title: "Rules | MFC Recruitment 2022", authwall: false }
   },
   {
     path: "/user/thanks",
     name: "Thanks",
     component: loadView("Thanks"),
     meta: {
-      title: "Thanks for Registering | MFC Recruitment 2021",
+      title: "Thanks for Registering | MFC Recruitment 2022",
       authwall: false
     }
   },
@@ -222,7 +186,7 @@ const routes = [
     path: "/test",
     name: "Test",
     component: loadView("Test"),
-    meta: { title: "Take Tests | MFC Recruitment 2021", authwall: true }
+    meta: { title: "Take Tests | MFC Recruitment 2022", authwall: true }
   },
   {
     path: "/social/linkedin",
