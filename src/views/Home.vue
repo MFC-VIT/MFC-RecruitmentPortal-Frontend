@@ -11,7 +11,7 @@
           is one of the largest developers' communities in VIT University aiding
           you to change your ideas into reality. It is a technical club
           dedicated to expand the technical know-how and productivity of all the
-          future engineers and scientists. it is a common platform for
+          future engineers and scientists. It is a common platform for
           intercollege Technical Activities. Under the precious guidance of the
           faculty members, this club is all set to and will create new horizons
           in the development of the college.
