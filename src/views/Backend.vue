@@ -59,8 +59,8 @@ export default {
     async sendAnswers() {
       this.isSubmitted = true;
       // eslint-disable-next-line
-      var getAPI = axios.create({
-        baseURL: "https://mfcrecruitment.herokuapp.com/",
+			var getAPI = axios.create({
+        baseURL: "https://mfcrec2022.herokuapp.com/",
         timeout: 3000,
         headers: {
           Authorization: "Bearer " + localStorage.getItem("accessToken")
@@ -77,14 +77,14 @@ export default {
         console.log(err);
       });
       // eslint-disable-next-line
-      return new Promise((resolve, reject) => {
+			return new Promise((resolve, reject) => {
         getAPI
           .post(
-            "https://mfcrecruitment.herokuapp.com/api/send_back_responses/",
+            "https://mfcrec2022.herokuapp.com/api/send_back_responses/",
             this.answers
           )
           // eslint-disable-next-line
-          .then(response => {
+					.then((response) => {
             this.$router.push({ name: "TestThanks" });
           })
           .catch(error => {
@@ -95,7 +95,7 @@ export default {
   },
   beforeMount() {
     var getAPI = axios.create({
-      baseURL: "https://mfcrecruitment.herokuapp.com/",
+      baseURL: "https://mfcrec2022.herokuapp.com/",
       timeout: 3000,
       headers: {
         Authorization: "Bearer " + localStorage.getItem("accessToken")
@@ -106,7 +106,7 @@ export default {
     });
     return new Promise((resolve, reject) => {
       getAPI
-        .get("https://mfcrecruitment.herokuapp.com/api/backendquestions/")
+        .get("https://mfcrec2022.herokuapp.com/api/backendquestions/")
         .then(response => {
           this.questions = response.data.write;
           resolve(true);

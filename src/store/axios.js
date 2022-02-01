@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const getAPI = axios.create({
-//     baseURL: 'https://mfcrecruitment.herokuapp.com/',
+//     baseURL: 'https://mfcrec2022.herokuapp.com/',
 //     timeout: 3000,
 //     headers: {
 //         Authorization: "Bearer " + localStorage.getItem('accessToken')
@@ -9,7 +9,7 @@ import axios from "axios";
 // })
 
 const API = axios.create({
-  baseURL: "https://mfcrecruitment.herokuapp.com/",
+  baseURL: "https://mfcrec2022.herokuapp.com/",
   timeout: 5000
 });
 

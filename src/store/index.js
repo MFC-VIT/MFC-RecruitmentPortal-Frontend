@@ -7,7 +7,7 @@ import axios from "axios";
 Vue.use(Vuex);
 
 var getAPI = axios.create({
-  baseURL: "https://mfcrecruitment.herokuapp.com/",
+  baseURL: "https://mfcrec2022.herokuapp.com/",
   timeout: 3000,
   headers: {
     Authorization: "Bearer " + localStorage.getItem("accessToken")
@@ -132,7 +132,7 @@ export default new Vuex.Store({
       });
       return new Promise((resolve, reject) => {
         getAPI
-          .post("https://mfcrecruitment.herokuapp.com/api/logout/", {
+          .post("https://mfcrec2022.herokuapp.com/api/logout/", {
             refresh: localStorage.getItem("refreshToken")
           })
           // eslint-disable-next-line
@@ -154,7 +154,7 @@ export default new Vuex.Store({
         }
       });
       getAPI
-        .get("https://mfcrecruitment.herokuapp.com/api/user_test/")
+        .get("https://mfcrec2022.herokuapp.com/api/user_test/")
         .then(response => {
           localStorage.setItem("Backend", response.data.backend),
             localStorage.setItem("Frontend", response.data.frontend),
