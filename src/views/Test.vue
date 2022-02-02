@@ -98,7 +98,7 @@ export default {
     takeTechnical() {
       this.$router.push({ name: "TechnicalRules" });
     },
-    takeManagment() {
+    takeManagement() {
       this.$router.push({ name: "ManagementRules" });
     },
     takeEditorial() {
