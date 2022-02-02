@@ -66,18 +66,18 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      // this.$store
-      //   .dispatch("userLogin", {
-      //     email: this.email,
-      //     password: this.password
-      //   })
-      //   .then(() => {
-      //     this.$router.push({ name: "Test" });
-      //   })
-      //   .catch(err => {
-      //     alert(err);
-      //   });
-      alert("Login is disabled now! Time is over!");
+      this.$store
+        .dispatch("userLogin", {
+          email: this.email,
+          password: this.password
+        })
+        .then(() => {
+          this.$router.push({ name: "Test" });
+        })
+        .catch(err => {
+          alert(err);
+        });
+      // alert("Login is disabled now! Time is over!");
     },
     resetPassword() {
       this.$router.push({ name: "Reset" });
