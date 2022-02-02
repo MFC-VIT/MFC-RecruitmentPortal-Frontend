@@ -71,8 +71,7 @@
             </h1>
           </div>
           <h5 class="text-center px-3 pb-4">
-            Where you immerse yourself in promoting peers' contributions and
-            explore your skills in using audio and video tools
+            Where you explore your skills in using audio and video tools
           </h5>
         </div>
       </b-col>
