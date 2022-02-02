@@ -46,10 +46,10 @@
             <b-form-input
               id="input-3"
               v-model="reg_no"
-              pattern="20[A-Za-z]{3}[0-9]{4}"
+              pattern="2(0|1)[A-Za-z]{3}[0-9]{4}"
               minlength="9"
               maxlength="9"
-              oninvalid="this.setCustomValidity('Only 2020 Batch is elligible')"
+              oninvalid="this.setCustomValidity('Only 2020/2021 Batch is elligible')"
               oninput="this.setCustomValidity('')"
               required
             ></b-form-input>
