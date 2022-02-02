@@ -8,28 +8,22 @@
         <br />
         <ul>
           <li class="p-1">
+            <h3>You can only attempt the test for a domain only once.</h3>
+          </li>
+          <li class="p-1">
             <h3>
-              This domain has 2 tasks. You have to submit atleast 1 task for
-              getting shortlisted for round 2.
+              The test shall be autosubmitted as soon as the time alloted is
+              completed.
             </h3>
           </li>
           <li class="p-1">
             <h3>
-              For submitting the task, upload the task on GDrive and submit the
-              link (Make sure that it's public).
+              If you attempt to refresh or go back, then your test shall be
+              auto-submitted!
             </h3>
           </li>
           <li class="p-1">
-            <h3>
-              You can submit the tasks multiple times. Your last submission will
-              be considered as the final submission.
-            </h3>
-          </li>
-          <li class="p-1">
-            <h3>
-              If you are uploading more than one task, then make sure you upload
-              it together.
-            </h3>
+            <h3>This test has a time limit of 20 minutes!</h3>
           </li>
         </ul>
         <br />
