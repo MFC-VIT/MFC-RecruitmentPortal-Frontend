@@ -18,7 +18,7 @@
             This domain is for students who are engrossed in discovering,
             exploring, researching, and learning more about technology. Our
             community encourages people who are interested in Web Development,
-            App Development, Machine Learning, and Competitive Coding!
+            App Development, and Machine Learning!
           </h6>
         </div>
       </b-col>

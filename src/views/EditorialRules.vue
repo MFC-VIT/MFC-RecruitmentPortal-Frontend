@@ -23,7 +23,7 @@
             </h3>
           </li>
           <li class="p-1">
-            <h3>This test has a time limit of 20 minutes!</h3>
+            <h3>This test has a time limit of 45 minutes!</h3>
           </li>
         </ul>
         <br />
