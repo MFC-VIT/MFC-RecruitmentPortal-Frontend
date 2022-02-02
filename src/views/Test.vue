@@ -15,8 +15,8 @@
             </h1>
           </div>
           <h5 class="text-center px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam neque
-            deserunt odit similique atque quia enim repellat fugiat veniam.
+            Where you immerse yourself in algorithms, code and innovative
+            projects
           </h5>
         </div>
       </b-col>
@@ -28,8 +28,8 @@
             </h1>
           </div>
           <h5 class="text-center px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam neque
-            deserunt odit similique atque quia enim repellat fugiat veniam.
+            Where you immerse yourself in connecting with people and becoming a
+            better handler of situations
           </h5>
         </div>
       </b-col>
@@ -45,8 +45,8 @@
             </h1>
           </div>
           <h5 class="text-center px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam neque
-            deserunt odit similique.
+            Where you immerse yourself in drawing attention and invoking
+            curiosity via words
           </h5>
         </div>
       </b-col>
@@ -58,8 +58,8 @@
             </h1>
           </div>
           <h5 class="text-center px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam neque
-            deserunt odit similique.
+            Where you immerse yourself in giving a one of a kind visual
+            experience
           </h5>
         </div>
       </b-col>
@@ -71,8 +71,8 @@
             </h1>
           </div>
           <h5 class="text-center px-3 pb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam neque
-            deserunt odit similique.
+            Where you immerse yourself in promoting peers' contributions and
+            explore your skills in using audio and video tools
           </h5>
         </div>
       </b-col>
@@ -96,19 +96,39 @@ export default {
   },
   methods: {
     takeTechnical() {
-      this.$router.push({ name: "TechnicalRules" });
+      if (localStorage.getItem("Techical") == "true")
+        alert(
+          "You have already attempted the Technical test! You can attempt it only once!"
+        );
+      else this.$router.push({ name: "TechnicalRules" });
     },
     takeManagement() {
-      this.$router.push({ name: "ManagementRules" });
+      if (localStorage.getItem("Management") == "true")
+        alert(
+          "You have already attempted the Management test! You can attempt it only once!"
+        );
+      else this.$router.push({ name: "ManagementRules" });
     },
     takeEditorial() {
-      this.$router.push({ name: "EditorialRules" });
+      if (localStorage.getItem("Editorial") == "true")
+        alert(
+          "You have already attempted the Editorial test! You can attempt it only once!"
+        );
+      else this.$router.push({ name: "EditorialRules" });
     },
     takeDesign() {
-      this.$router.push({ name: "DesignRules" });
+      if (localStorage.getItem("Design") == "true")
+        alert(
+          "You have already attempted the Design test! You can attempt it only once!"
+        );
+      else this.$router.push({ name: "DesignRules" });
     },
     takeMedia() {
-      this.$router.push({ name: "MediaRules" });
+      if (localStorage.getItem("Media") == "true")
+        alert(
+          "You have already attempted the Media test! You can attempt it only once!"
+        );
+      else this.$router.push({ name: "MediaRules" });
     }
   }
 };
