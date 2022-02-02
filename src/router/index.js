@@ -23,18 +23,18 @@ const routes = [
     component: Home,
     meta: { title: "Home | MFC Recruitment 2022", authwall: false }
   },
-  // {
-  //   path: "/user/login",
-  //   name: "Login",
-  //   component: loadView("Login"),
-  //   meta: { title: "Login | MFC Recruitment 2022", authwall: false }
-  // },
-  // {
-  //   path: "/user/register",
-  //   name: "Register",
-  //   component: loadView("Register"),
-  //   meta: { title: "Register | MFC Recruitment 2022", authwall: false }
-  // },
+  {
+    path: "/user/login",
+    name: "Login",
+    component: loadView("Login"),
+    meta: { title: "Login | MFC Recruitment 2022", authwall: false }
+  },
+  {
+    path: "/user/register",
+    name: "Register",
+    component: loadView("Register"),
+    meta: { title: "Register | MFC Recruitment 2022", authwall: false }
+  },
   {
     path: "/user/verify",
     name: "Verify",
