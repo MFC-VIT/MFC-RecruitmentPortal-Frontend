@@ -24,7 +24,7 @@
             rows="5"
             class="site-edit-ta m-2 px-5 py-4"
             :id="item.question_id"
-            placeholder="Type your link here!"
+            placeholder="Type your answer here!"
           >
           Type your answer here!
           </textarea>
