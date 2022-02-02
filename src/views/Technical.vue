@@ -49,7 +49,7 @@
           <br />
           <br />
         </div>
-        <div v-for="item in this.questions" :key="item.question_id">
+        <div v-for="item in this.questions.write" :key="item.question_id">
           <a :href="item.link" target="_blank">
             <b-img-lazy
               class="site-tech-img m-2"
@@ -191,7 +191,7 @@ export default {
       getAPI
         .get("https://mfcrec2022.herokuapp.com/api/technicalquestions/")
         .then(response => {
-          this.questions = response.data.write;
+          this.questions = response.data;
           resolve(true);
         })
         .catch(error => {

@@ -106,13 +106,15 @@ export default {
   },
   methods: {
     takeTechnical() {
-      if (localStorage.getItem("Techical") == "true")
+      this.$store.dispatch("getTest");
+      if (localStorage.getItem("Technical") == "true")
         alert(
           "You have already attempted the Technical test! You can attempt it only once!"
         );
       else this.$router.push({ name: "TechnicalRules" });
     },
     takeManagement() {
+      this.$store.dispatch("getTest");
       if (localStorage.getItem("Management") == "true")
         alert(
           "You have already attempted the Management test! You can attempt it only once!"
@@ -120,6 +122,7 @@ export default {
       else this.$router.push({ name: "ManagementRules" });
     },
     takeEditorial() {
+      this.$store.dispatch("getTest");
       if (localStorage.getItem("Editorial") == "true")
         alert(
           "You have already attempted the Editorial test! You can attempt it only once!"
@@ -127,6 +130,7 @@ export default {
       else this.$router.push({ name: "EditorialRules" });
     },
     takeDesign() {
+      this.$store.dispatch("getTest");
       if (localStorage.getItem("Design") == "true")
         alert(
           "You have already attempted the Design test! You can attempt it only once!"
@@ -134,6 +138,7 @@ export default {
       else this.$router.push({ name: "DesignRules" });
     },
     takeMedia() {
+      this.$store.dispatch("getTest");
       if (localStorage.getItem("Media") == "true")
         alert(
           "You have already attempted the Media test! You can attempt it only once!"
