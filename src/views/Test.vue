@@ -14,10 +14,12 @@
               Technical
             </h1>
           </div>
-          <h5 class="text-center px-3 pb-4">
-            Where you immerse yourself in algorithms, code and innovative
-            projects
-          </h5>
+          <h6 class="text-center px-3 pb-4">
+            This domain is for students who are engrossed in discovering,
+            exploring, researching, and learning more about technology. Our
+            community encourages people who are interested in Web Development,
+            App Development, Machine Learning, and Competitive Coding!
+          </h6>
         </div>
       </b-col>
       <b-col md="6">
@@ -27,10 +29,12 @@
               Management
             </h1>
           </div>
-          <h5 class="text-center px-3 pb-4">
-            Where you immerse yourself in connecting with people and becoming a
-            better handler of situations
-          </h5>
+          <h6 class="text-center px-3 pb-4">
+            May it be marketing or operations, the management domain is built to
+            assist the club members of the MFC team with the systematic and
+            effective functioning of the club. It is the ultimate "powerhouse"
+            of the club.
+          </h6>
         </div>
       </b-col>
     </b-row>
@@ -44,10 +48,12 @@
               Editorial
             </h1>
           </div>
-          <h5 class="text-center px-3 pb-4">
-            Where you immerse yourself in drawing attention and invoking
-            curiosity via words
-          </h5>
+          <h6 class="text-center px-3 pb-4">
+            This domain provides exclusive exposure to students in order to
+            unleash their creativity as well as develop their intellectual
+            writing capabilities so as to produce authentic content in authentic
+            styles.
+          </h6>
         </div>
       </b-col>
       <b-col md="4">
@@ -57,10 +63,12 @@
               Design
             </h1>
           </div>
-          <h5 class="text-center px-3 pb-4">
-            Where you immerse yourself in giving a one of a kind visual
-            experience
-          </h5>
+          <h6 class="text-center px-3 pb-4">
+            The purpose of this domain is to promote and encourage interest in
+            the fields of graphic design and UI/UX design among students. It
+            instigates and enriches the creativity among the students of the
+            club.
+          </h6>
         </div>
       </b-col>
       <b-col md="4">
@@ -70,9 +78,12 @@
               Media
             </h1>
           </div>
-          <h5 class="text-center px-3 pb-4">
-            Where you explore your skills in using audio and video tools
-          </h5>
+          <h6 class="text-center px-3 pb-4">
+            This domain is for the creative and talented minds intrigued by the
+            digital media world to explore and nurture their creativity and
+            ignite in themselves a passion for various technical aspects of the
+            media.
+          </h6>
         </div>
       </b-col>
     </b-row>
