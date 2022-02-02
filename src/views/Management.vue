@@ -90,7 +90,7 @@ export default {
 			return new Promise((resolve, reject) => {
         getAPI
           .post(
-            "https://mfcrec2022.herokuapp.com/api/send_mgmt_responses/",
+            "https://mfcrec2022.herokuapp.com/api/send_mang_responses/",
             this.answers
           )
           // eslint-disable-next-line
