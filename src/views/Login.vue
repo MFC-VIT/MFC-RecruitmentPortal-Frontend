@@ -66,21 +66,22 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$store
-        .dispatch("userLogin", {
-          email: this.email,
-          password: this.password
-        })
-        .then(() => {
-          this.$router.push({ name: "Test" });
-        })
-        .catch(err => {
-          alert(err);
-        });
-      // alert("Login is disabled now! Time is over!");
+      alert("Recruitments are over! Please come back later!");
+      // this.$store
+      //   .dispatch("userLogin", {
+      //     email: this.email,
+      //     password: this.password
+      //   })
+      //   .then(() => {
+      //     this.$router.push({ name: "Test" });
+      //   })
+      //   .catch(err => {
+      //     alert(err);
+      //   });
     },
     resetPassword() {
-      this.$router.push({ name: "Reset" });
+      // this.$router.push({ name: "Reset" });
+      alert("Recruitments are over! Please come back later!");
     }
   }
 };

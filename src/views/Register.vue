@@ -111,23 +111,25 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      this.$store
-        .dispatch("userRegister", {
-          email: this.email,
-          username: this.username,
-          phone: this.phone,
-          password: this.password,
-          reg_no: this.reg_no
-        })
-        .then(() => {
-          this.$router.push({ name: "Verify" });
-        })
-        .catch(err => {
-          alert(err);
-        });
+      alert("Recruitments are over! Please come back later!");
+      // this.$store
+      //   .dispatch("userRegister", {
+      //     email: this.email,
+      //     username: this.username,
+      //     phone: this.phone,
+      //     password: this.password,
+      //     reg_no: this.reg_no
+      //   })
+      //   .then(() => {
+      //     this.$router.push({ name: "Verify" });
+      //   })
+      //   .catch(err => {
+      //     alert(err);
+      //   });
     },
     verify() {
-      this.$router.push({ name: "Verify" });
+      alert("Recruitments are over! Please come back later!");
+      // this.$router.push({ name: "Verify" });
     }
   }
 };
